@@ -76,6 +76,8 @@ NKHTTPRequest.GET(
 
 ### Networking
 
+_API uses authentication will be available soon_
+
 **GET** - A simple HTTP GET method to get request from a url.
 
 _Parameters_
@@ -91,6 +93,15 @@ _Parameters_
 
 `urlString`: The string representing the url. <br />
 `params`: The body you need to pass with the POST method. Resources you want to pass. <br />
+`success`: Successful closure in case the request was successful. <br />
+`failure`: Failure Closure which notifies if any error has occured during the request. <br />
+
+**DELETE** - A simple HTTP DELETE method to get request from a url.
+
+_Parameters_
+
+`urlString`: The string representing the url. <br />
+`params`: The body you need to pass with the DELETE method. Resources you want to delete. <br />
 `success`: Successful closure in case the request was successful. <br />
 `failure`: Failure Closure which notifies if any error has occured during the request. <br />
 
