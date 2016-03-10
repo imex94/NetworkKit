@@ -72,7 +72,19 @@ NKHTTPRequest.GET(
 
 ## API
 
+### Networking
 
+**GET** - A simple HTTP GET method to get request from a url.
+
+_Parameters_
+
+`urlString`: The string representing the url.
+`params`: The parameters you need to pass with the GET method. Everything after '?'.
+`success`: Successful closure in case the request was successful.
+`failure`: Failure Closure which notifies if any error has occurred during the request.
+
+
+### Parsing
 
 ## License
 
