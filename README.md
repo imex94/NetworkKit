@@ -10,4 +10,4 @@ Download **NetworkKit.framework** file and drag it into your application.
 
 Make sure you copy the framework into the project directory and in side the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the framework.
 
-[logo]: https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework"
+![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework")

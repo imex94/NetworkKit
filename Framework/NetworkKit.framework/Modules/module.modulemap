@@ -1,0 +1,10 @@
+framework module NetworkKit {
+  umbrella header "NetworkKit.h"
+
+  export *
+  module * { export * }
+}
+
+module NetworkKit.Swift {
+    header "NetworkKit-Swift.h"
+}

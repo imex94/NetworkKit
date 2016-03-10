@@ -1,0 +1,15 @@
+{
+    "by": "jergason",
+    "descendants": 300,
+    "id": 11245652,
+    "kids": [
+             11245801,
+             11245962,
+             11245988
+             ],
+    "score": 812,
+    "time": 1457449896,
+    "title": "CocoaPods downloads max out five GitHub server CPUs",
+    "type": "story",
+    "url": "https://github.com/CocoaPods/CocoaPods/issues/4989#issuecomment-193772935"
+}
