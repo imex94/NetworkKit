@@ -1,8 +1,8 @@
 # NetworkKit
 
-A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic GET, POST, DELETE HTTP requests.
+A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic **GET**, **POST**, **DELETE** HTTP requests.
 
-_Authentication coming soon_.
+_Authentication coming soon_
 
 ## Install
 
@@ -69,3 +69,11 @@ NKHTTPRequest.GET(
       print(error.message)
   })
 ```
+
+## API
+
+
+
+## License
+
+MIT ⓒ Alex Telek
