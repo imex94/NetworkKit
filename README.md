@@ -28,5 +28,5 @@ NKHTTPRequest.GET(
   },
   failure: { error in
       print(error.message)
-  })
+})
 ```
