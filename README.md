@@ -16,17 +16,56 @@ Make sure you copy the framework into the project directory and in side the **Pr
 
 ## Usage
 
-To connect to an API and perform a **GET** request is simple and intuitive, something like this
+For the purpose of this example, let say we want to download one of the stories from Hacker News. For this let's use their API endpoint - https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty, which give us the following **JSON** response:
+
+```json
+{
+  "by": "jergason",
+  "id": 11245652,
+  "kids": [
+    11245801,
+    11245962,
+    11250239,
+    11246046
+  ],
+  "time": 1457449896,
+  "title": "CocoaPods downloads max out five GitHub server CPUs",
+  "type": "story"
+}
+```
+We want to deserialize the JSON response above to **Swift object**. To do this, we need a **struct** that conforms the protocol **Deserializable** and implement the **required init(data: [String: AnyObject])** constructor and use the deserialization operator (`<--`):
+
+```swift
+struct NKItem: Deserializable {
+    var id: Int?
+    var username: String?
+    var kids: [Int]?
+    var title: String?
+    var type: String?
+    var date: NSDate?
+
+    init(data: [String : AnyObject]) {
+        id <-- data["id"]
+        username <-- data["by"]
+        kids <-- data["kids"]
+        title <-- data["title"]
+        type <-- data["type"]
+        date <-- data["time"]
+    }
+}
+```
+
+To connect to an API and perform a **GET** request is simple and intuitive and parsing is like **magic**:
 
 ```swift
 NKHTTPRequest.GET(
   "https://hacker-news.firebaseio.com/v0/item/11245652.json",                
   params: ["print": "pretty"],
   success: { data in
-      var item: NKHNItem?
+      var item: NKItem?
       item <-- data                                        
   },
   failure: { error in
       print(error.message)
-})
+  })
 ```
