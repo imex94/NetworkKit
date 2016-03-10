@@ -80,11 +80,19 @@ NKHTTPRequest.GET(
 
 _Parameters_
 
-`urlString`: The string representing the url.
-`params`: The parameters you need to pass with the GET method. Everything after '?'.
-`success`: Successful closure in case the request was successful.
-`failure`: Failure Closure which notifies if any error has occurred during the request.
+`urlString`: The string representing the url. <br />
+`params`: The parameters you need to pass with the GET method. Everything after '?'. <br />
+`success`: Successful closure in case the request was successful. <br />
+`failure`: Failure Closure which notifies if any error has occurred during the request. <br />
 
+**POST** - A simple HTTP POST method to get request from a url.
+
+_Parameters_
+
+`urlString`: The string representing the url. <br />
+`params`: The body you need to pass with the POST method. Resources you want to pass. <br />
+`success`: Successful closure in case the request was successful. <br />
+`failure`: Failure Closure which notifies if any error has occured during the request. <br />
 
 ### Parsing
 

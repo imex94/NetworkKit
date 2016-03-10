@@ -118,7 +118,7 @@ public class NKHTTPRequest: NSObject {
     }
     
     /**
-     A simple HTTP POST method to get request from a url.
+     A simple HTTP DELETE method to get request from a url.
      
      - Parameters:
         - urlString: The string representing the url.
