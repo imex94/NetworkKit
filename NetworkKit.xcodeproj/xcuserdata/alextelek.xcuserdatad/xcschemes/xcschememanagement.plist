@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AuthFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>NetworkKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>NetworkKitExample.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>NetworkKitTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,6 +27,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2BD3D3B11C92E3400080BC62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BD3D3C91C92EE920080BC62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2BFCC4A21C91B8D500FD0CA9</key>
 		<dict>
 			<key>primary</key>

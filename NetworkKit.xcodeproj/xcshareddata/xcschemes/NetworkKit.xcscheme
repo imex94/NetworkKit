@@ -20,6 +20,20 @@
                ReferencedContainer = "container:NetworkKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BFCC4B31C91C0B000FD0CA9"
+               BuildableName = "NetworkKitTests.xctest"
+               BlueprintName = "NetworkKitTests"
+               ReferencedContainer = "container:NetworkKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

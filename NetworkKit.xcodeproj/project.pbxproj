@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BD3D3AC1C92E1F60080BC62 /* NKAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3AB1C92E1F60080BC62 /* NKAuthentication.swift */; };
+		2BD3D3B51C92E3400080BC62 /* AuthFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD3D3B41C92E3400080BC62 /* AuthFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BD3D3BF1C92E3940080BC62 /* AFAuthFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD3D3BB1C92E3940080BC62 /* AFAuthFunctions.h */; };
+		2BD3D3C01C92E3940080BC62 /* AFAuthFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3BC1C92E3940080BC62 /* AFAuthFunctions.m */; };
+		2BD3D3C11C92E3940080BC62 /* AFAuthClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD3D3BD1C92E3940080BC62 /* AFAuthClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BD3D3C21C92E3940080BC62 /* AFAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3BE1C92E3940080BC62 /* AFAuthClient.m */; };
+		2BD3D3C51C92E3CB0080BC62 /* AuthFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD3D3B21C92E3400080BC62 /* AuthFramework.framework */; };
+		2BD3D3CD1C92EE920080BC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */; };
+		2BD3D3CF1C92EE920080BC62 /* NKEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */; };
+		2BD3D3D21C92EE920080BC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3D3D01C92EE920080BC62 /* Main.storyboard */; };
+		2BD3D3D41C92EE920080BC62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3D3D31C92EE920080BC62 /* Assets.xcassets */; };
+		2BD3D3D71C92EE920080BC62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3D3D51C92EE920080BC62 /* LaunchScreen.storyboard */; };
+		2BD3D3DE1C92EEC90080BC62 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */; };
+		2BD3D3E31C92EFF80080BC62 /* NKEItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3E21C92EFF80080BC62 /* NKEItem.swift */; };
 		2BFCC4A71C91B8D500FD0CA9 /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BFCC4B71C91C0B000FD0CA9 /* NetworkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4B61C91C0B000FD0CA9 /* NetworkKitTests.swift */; };
 		2BFCC4B91C91C0B000FD0CA9 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */; };
@@ -22,6 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2BD3D3C31C92E3C60080BC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BFCC49A1C91B8D500FD0CA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD3D3B11C92E3400080BC62;
+			remoteInfo = AuthFramework;
+		};
+		2BD3D3DC1C92EEC50080BC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BFCC49A1C91B8D500FD0CA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BFCC4A21C91B8D500FD0CA9;
+			remoteInfo = NetworkKit;
+		};
 		2BFCC4BA1C91C0B000FD0CA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BFCC49A1C91B8D500FD0CA9 /* Project object */;
@@ -32,6 +60,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BD3D3AB1C92E1F60080BC62 /* NKAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKAuthentication.swift; sourceTree = "<group>"; };
+		2BD3D3B21C92E3400080BC62 /* AuthFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AuthFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD3D3B41C92E3400080BC62 /* AuthFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthFramework.h; sourceTree = "<group>"; };
+		2BD3D3B61C92E3400080BC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD3D3BB1C92E3940080BC62 /* AFAuthFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAuthFunctions.h; sourceTree = "<group>"; };
+		2BD3D3BC1C92E3940080BC62 /* AFAuthFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAuthFunctions.m; sourceTree = "<group>"; };
+		2BD3D3BD1C92E3940080BC62 /* AFAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAuthClient.h; sourceTree = "<group>"; };
+		2BD3D3BE1C92E3940080BC62 /* AFAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAuthClient.m; sourceTree = "<group>"; };
+		2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKEViewController.swift; sourceTree = "<group>"; };
+		2BD3D3D11C92EE920080BC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BD3D3D31C92EE920080BC62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BD3D3D61C92EE920080BC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BD3D3D81C92EE920080BC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD3D3E21C92EFF80080BC62 /* NKEItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKEItem.swift; sourceTree = "<group>"; };
 		2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
 		2BFCC4A81C91B8D500FD0CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,10 +94,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2BD3D3AE1C92E3400080BC62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD3D3C71C92EE920080BC62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD3D3DE1C92EEC90080BC62 /* NetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BFCC49F1C91B8D500FD0CA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD3D3C51C92E3CB0080BC62 /* AuthFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,11 +128,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BD3D3B31C92E3400080BC62 /* AuthFramework */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3D3B41C92E3400080BC62 /* AuthFramework.h */,
+				2BD3D3BB1C92E3940080BC62 /* AFAuthFunctions.h */,
+				2BD3D3BC1C92E3940080BC62 /* AFAuthFunctions.m */,
+				2BD3D3BD1C92E3940080BC62 /* AFAuthClient.h */,
+				2BD3D3BE1C92E3940080BC62 /* AFAuthClient.m */,
+				2BD3D3B61C92E3400080BC62 /* Info.plist */,
+			);
+			path = AuthFramework;
+			sourceTree = "<group>";
+		};
+		2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3D3DF1C92EEED0080BC62 /* Model */,
+				2BD3D3E11C92EEFB0080BC62 /* View */,
+				2BD3D3E01C92EEF40080BC62 /* Controller */,
+				2BD3D3D81C92EE920080BC62 /* Info.plist */,
+			);
+			path = NetworkKitExample;
+			sourceTree = "<group>";
+		};
+		2BD3D3DF1C92EEED0080BC62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3D3E21C92EFF80080BC62 /* NKEItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BD3D3E01C92EEF40080BC62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */,
+				2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2BD3D3E11C92EEFB0080BC62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3D3D01C92EE920080BC62 /* Main.storyboard */,
+				2BD3D3D31C92EE920080BC62 /* Assets.xcassets */,
+				2BD3D3D51C92EE920080BC62 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		2BFCC4991C91B8D500FD0CA9 = {
 			isa = PBXGroup;
 			children = (
+				2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */,
 				2BFCC4A51C91B8D500FD0CA9 /* NetworkKit */,
 				2BFCC4B51C91C0B000FD0CA9 /* NetworkKitTests */,
+				2BD3D3B31C92E3400080BC62 /* AuthFramework */,
 				2BFCC4A41C91B8D500FD0CA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +195,8 @@
 			children = (
 				2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */,
 				2BFCC4B41C91C0B000FD0CA9 /* NetworkKitTests.xctest */,
+				2BD3D3B21C92E3400080BC62 /* AuthFramework.framework */,
+				2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +208,7 @@
 				2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */,
 				2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */,
 				2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */,
+				2BD3D3AB1C92E1F60080BC62 /* NKAuthentication.swift */,
 				2BFCC4A81C91B8D500FD0CA9 /* Info.plist */,
 			);
 			path = NetworkKit;
@@ -116,6 +232,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2BD3D3AF1C92E3400080BC62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD3D3BF1C92E3940080BC62 /* AFAuthFunctions.h in Headers */,
+				2BD3D3B51C92E3400080BC62 /* AuthFramework.h in Headers */,
+				2BD3D3C11C92E3940080BC62 /* AFAuthClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BFCC4A01C91B8D500FD0CA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +253,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2BD3D3B11C92E3400080BC62 /* AuthFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD3D3B71C92E3400080BC62 /* Build configuration list for PBXNativeTarget "AuthFramework" */;
+			buildPhases = (
+				2BD3D3AD1C92E3400080BC62 /* Sources */,
+				2BD3D3AE1C92E3400080BC62 /* Frameworks */,
+				2BD3D3AF1C92E3400080BC62 /* Headers */,
+				2BD3D3B01C92E3400080BC62 /* Resources */,
+				2BD3D3BA1C92E35B0080BC62 /* Buil Number */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthFramework;
+			productName = AuthFramework;
+			productReference = 2BD3D3B21C92E3400080BC62 /* AuthFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BD3D3C91C92EE920080BC62 /* NetworkKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD3D3D91C92EE920080BC62 /* Build configuration list for PBXNativeTarget "NetworkKitExample" */;
+			buildPhases = (
+				2BD3D3C61C92EE920080BC62 /* Sources */,
+				2BD3D3C71C92EE920080BC62 /* Frameworks */,
+				2BD3D3C81C92EE920080BC62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BD3D3DD1C92EEC50080BC62 /* PBXTargetDependency */,
+			);
+			name = NetworkKitExample;
+			productName = NetworkKitExample;
+			productReference = 2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BFCC4AB1C91B8D500FD0CA9 /* Build configuration list for PBXNativeTarget "NetworkKit" */;
@@ -141,6 +304,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2BD3D3C41C92E3C60080BC62 /* PBXTargetDependency */,
 			);
 			name = NetworkKit;
 			productName = NetworkKit;
@@ -175,6 +339,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = alextelek;
 				TargetAttributes = {
+					2BD3D3B11C92E3400080BC62 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2BD3D3C91C92EE920080BC62 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					2BFCC4A21C91B8D500FD0CA9 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -189,19 +359,39 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2BFCC4991C91B8D500FD0CA9;
 			productRefGroup = 2BFCC4A41C91B8D500FD0CA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2BD3D3C91C92EE920080BC62 /* NetworkKitExample */,
 				2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */,
 				2BFCC4B31C91C0B000FD0CA9 /* NetworkKitTests */,
+				2BD3D3B11C92E3400080BC62 /* AuthFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2BD3D3B01C92E3400080BC62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD3D3C81C92EE920080BC62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD3D3D71C92EE920080BC62 /* LaunchScreen.storyboard in Resources */,
+				2BD3D3D41C92EE920080BC62 /* Assets.xcassets in Resources */,
+				2BD3D3D21C92EE920080BC62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BFCC4A11C91B8D500FD0CA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +411,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BD3D3BA1C92E35B0080BC62 /* Buil Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Buil Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 		2BFCC4AE1C91B8E800FD0CA9 /* Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,12 +456,32 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2BD3D3AD1C92E3400080BC62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD3D3C21C92E3940080BC62 /* AFAuthClient.m in Sources */,
+				2BD3D3C01C92E3940080BC62 /* AFAuthFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD3D3C61C92EE920080BC62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD3D3CF1C92EE920080BC62 /* NKEViewController.swift in Sources */,
+				2BD3D3CD1C92EE920080BC62 /* AppDelegate.swift in Sources */,
+				2BD3D3E31C92EFF80080BC62 /* NKEItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BFCC49E1C91B8D500FD0CA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2BFCC4C31C91C0C400FD0CA9 /* NKJSONHelper.swift in Sources */,
 				2BFCC4C41C91C0C400FD0CA9 /* NKReachability.swift in Sources */,
+				2BD3D3AC1C92E1F60080BC62 /* NKAuthentication.swift in Sources */,
 				2BFCC4C21C91C0C400FD0CA9 /* NKHTTPRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +501,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2BD3D3C41C92E3C60080BC62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD3D3B11C92E3400080BC62 /* AuthFramework */;
+			targetProxy = 2BD3D3C31C92E3C60080BC62 /* PBXContainerItemProxy */;
+		};
+		2BD3D3DD1C92EEC50080BC62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */;
+			targetProxy = 2BD3D3DC1C92EEC50080BC62 /* PBXContainerItemProxy */;
+		};
 		2BFCC4BB1C91C0B000FD0CA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */;
@@ -284,7 +518,82 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2BD3D3D01C92EE920080BC62 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD3D3D11C92EE920080BC62 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BD3D3D51C92EE920080BC62 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD3D3D61C92EE920080BC62 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2BD3D3B81C92E3400080BC62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AuthFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.AuthFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2BD3D3B91C92E3400080BC62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AuthFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.AuthFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2BD3D3DA1C92EE920080BC62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NetworkKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2BD3D3DB1C92EE920080BC62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NetworkKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2BFCC4A91C91B8D500FD0CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +693,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NetworkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +712,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NetworkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +743,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2BD3D3B71C92E3400080BC62 /* Build configuration list for PBXNativeTarget "AuthFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD3D3B81C92E3400080BC62 /* Debug */,
+				2BD3D3B91C92E3400080BC62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD3D3D91C92EE920080BC62 /* Build configuration list for PBXNativeTarget "NetworkKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD3D3DA1C92EE920080BC62 /* Debug */,
+				2BD3D3DB1C92EE920080BC62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2BFCC49D1C91B8D500FD0CA9 /* Build configuration list for PBXProject "NetworkKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -448,6 +776,7 @@
 				2BFCC4AD1C91B8D500FD0CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BFCC4BC1C91C0B000FD0CA9 /* Build configuration list for PBXNativeTarget "NetworkKitTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +785,7 @@
 				2BFCC4BE1C91C0B000FD0CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
