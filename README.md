@@ -5,8 +5,6 @@
 
 A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic **GET**, **POST**, **DELETE** HTTP requests.
 
-_Authentication coming soon_
-
 ## Install
 
 ### Framework
@@ -18,6 +16,8 @@ Make sure you copy the framework into the project directory and in side the **Pr
 ![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework")
 
 ## Usage
+
+**NetworkKitExample** project provides a guidance to get started.
 
 For the purpose of this example, let say we want to download one of the stories from Hacker News. For this let's use their API endpoint - https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty, which give us the following **JSON** response:
 
@@ -73,6 +73,22 @@ NKHTTPRequest.GET(
   })
 ```
 
+Or if you need **Oauth 2.0** to use an API, that's also simple, just include the auth **consumer key** and **consumer secret** when you perform a request:
+
+```swift
+NKHTTPRequest.GET(
+  "https://hacker-news.firebaseio.com/v0/item/11245652.json",
+  auth: NKOauth(consumerKey: "consumerKey", consumerSecret: "consumerSecret"),
+  params: ["print": "pretty"],
+  success: { data in
+      var item: NKEItem?
+      item <-- data
+  },
+  failure: { error in
+      print(error.message)
+  })
+```
+
 ## API
 
 ### Networking
@@ -85,7 +101,11 @@ A simple HTTP GET method to get request from a url.
 **urlString** - `String` <br />
 The string representing the url. <br />
 
-**params** - `[NSObject: AnyObject]?` <br />
+**auth (Optional)** - `NKOauth?` <br />
+Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
+NKOauth(consumerKey: "", consumerSecret: ""). <br />
+
+**params (Optional)** - `[NSObject: AnyObject]?` <br />
 The parameters you need to pass with the GET method. Everything after '?'. <br />
 
 **success** - `((AnyObject) -> Void)` <br />
@@ -100,7 +120,11 @@ A simple HTTP POST method to post a resource to the url.
 **urlString** - `String` <br />
 The string representing the url.
 
-**params** - `[NSObject: AnyObject]?` <br />
+**auth (Optional)** - `NKOauth?` <br />
+Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
+NKOauth(consumerKey: "", consumerSecret: ""). <br />
+
+**params (Optional)** - `[NSObject: AnyObject]?` <br />
 The body you need to pass with the POST method. Resources you want to pass. <br />
 
 **success** - `((AnyObject) -> Void)` <br />
@@ -115,7 +139,11 @@ A simple HTTP DELETE method to delete a resource from the server.
 **urlString** - `String` <br />
 The string representing the url. <br />
 
-**params** - `[NSObject: AnyObject]?` <br />
+**auth (Optional)** - `NKOauth?` <br />
+Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
+NKOauth(consumerKey: "", consumerSecret: ""). <br />
+
+**params (Optional)** - `[NSObject: AnyObject]?` <br />
 The body you need to pass with the DELETE method. Resources you want to delete. <br />
 
 **success** - `((AnyObject) -> Void)` <br />
