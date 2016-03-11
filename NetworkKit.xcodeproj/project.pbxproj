@@ -759,6 +759,7 @@
 				2BD3D3DB1C92EE920080BC62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BFCC49D1C91B8D500FD0CA9 /* Build configuration list for PBXProject "NetworkKit" */ = {
 			isa = XCConfigurationList;
