@@ -93,8 +93,6 @@ NKHTTPRequest.GET(
 
 ### Networking
 
-_API uses authentication will be available soon_
-
 #### GET
 A simple HTTP GET method to get request from a url.
 
