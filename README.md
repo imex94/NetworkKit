@@ -21,6 +21,9 @@ Make sure you copy the framework into the project directory and in side the **Pr
 
 For the purpose of this example, let say we want to download one of the stories from Hacker News. For this let's use their API endpoint - https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty, which give us the following **JSON** response:
 
+
+[![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
+
 ```json
 {
   "by": "jergason",
@@ -205,6 +208,8 @@ date <-- 1414172803 // timestamp to NSDate deserialization
 #### Nested JSON
 
 Let's consider a the truncated version of the Twitter API response:
+
+[![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
 
 ```json
 {
