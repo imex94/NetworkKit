@@ -73,22 +73,6 @@ NKHTTPRequest.GET(
   })
 ```
 
-Or if you need **Oauth 2.0** to use an API, that's also simple, just include the auth **consumer key** and **consumer secret** when you perform a request:
-
-```swift
-NKHTTPRequest.GET(
-  "https://hacker-news.firebaseio.com/v0/item/11245652.json",
-  auth: NKOauth(consumerKey: "consumerKey", consumerSecret: "consumerSecret"),
-  params: ["print": "pretty"],
-  success: { data in
-      var item: NKEItem?
-      item <-- data
-  },
-  failure: { error in
-      print(error.message)
-  })
-```
-
 ## API
 
 ### Networking
@@ -149,6 +133,42 @@ Successful closure in case the request was successful. <br />
 
 **failure** -  `((NKHTTPRequestError) -> Void)` <br />
 Failure Closure which notifies if any error has occured during the request. <br />
+
+#### OAuth 2.0
+
+Or if you need OAuth 2.0 to use an API, that's also simple, just include the auth **consumer key** and **consumer secret** when you perform a request:
+
+```swift
+NKHTTPRequest.GET(
+  "https://hacker-news.firebaseio.com/v0/item/11245652.json",
+  auth: NKOauth(consumerKey: "consumerKey", consumerSecret: "consumerSecret"),
+  params: ["print": "pretty"],
+  success: { data in
+      var item: NKEItem?
+      item <-- data
+  },
+  failure: { error in
+      print(error.message)
+  })
+```
+
+#### Cancel HTTP Requests
+
+There are error and internet availablity checking implemented in the framework, but you can simply cancel any task you want if its needed:
+
+```swift
+let dataTask = NKHTTPRequest.GET(
+  "https://hacker-news.firebaseio.com/v0/item/11245652.json",
+  params: ["print": "pretty"],
+  success: { data in
+
+  },
+  failure: { error in
+    print(error.message)
+})
+
+dataTask?.cancel()
+```
 
 ### Parsing
 
