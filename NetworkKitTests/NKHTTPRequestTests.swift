@@ -84,6 +84,34 @@ class NKHTTPRequestTests: XCTestCase {
         }
     }
     
+    func testHTTPRequestCancelledShouldResultWarning() {
+        let expectation = expectationWithDescription("Test GET HTTP Request")
+        
+        if !NKReachability.isNetworkAvailable() {
+            XCTAssertTrue(true)
+        } else {
+            let task = NKHTTPRequest.GET(
+                "https://hacker-news.firebaseio.com/v0/item/11245652.json",
+                params: ["print": "pretty"],
+                success: { data in
+                    
+                    XCTFail()
+                    
+                    expectation.fulfill()
+                },
+                failure: { error in
+                    XCTAssertNotNil(error)
+                    
+                    expectation.fulfill()
+            })
+            task?.cancel()
+            
+            waitForExpectationsWithTimeout(10.0) { (error) -> Void in
+                print(error)
+            }
+        }
+    }
+    
     func testInternetAvailability() {
         if NKReachability.isNetworkAvailable() {
             
