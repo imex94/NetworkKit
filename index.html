@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>NetworkKit by imex94</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>NetworkKit</h1>
+        <h2>Lightweight Networking and Parsing framework made for iOS, Mac, WatchOS and tvOS.</h2>
+        <a href="https://github.com/imex94/NetworkKit" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="networkkit-" class="anchor" href="#networkkit-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NetworkKit <img src="https://go-shields.herokuapp.com/license-MIT-blue.png" alt="License MIT">
+</h1>
+
+<p><a href="https://travis-ci.org/imex94/NetworkKit"><img src="https://travis-ci.org/imex94/NetworkKit.svg?branch=master" alt="Build Status"></a>
+<a href=""><img src="https://camo.githubusercontent.com/30f3ea607a65990e8cf2d6e11a48602167399324/68747470733a2f2f636f636f61706f642d6261646765732e6865726f6b756170702e636f6d2f702f41464e6574776f726b696e672f62616467652e706e67" alt="Available devices"></a></p>
+
+<p>A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced <a href="https://github.com/isair/JSONHelper">JSONHelper</a> with functional parsing. For networking the library supports basic <strong>GET</strong>, <strong>POST</strong>, <strong>DELETE</strong> HTTP requests.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
+
+<h3>
+<a id="framework" class="anchor" href="#framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Framework</h3>
+
+<p>Download <strong>NetworkKit.framework</strong> file in the Framework folder and drag it into your application.</p>
+
+<p>Make sure you copy the framework into the project directory and in side the <strong>Project Target</strong> - <strong>Build Phases</strong> - <strong>Link Binary With Libraries</strong> you have added the framework.</p>
+
+<p><img src="https://github.com/imex94/NetworkKit/blob/master/images/import.png" alt="Import Framework" title="Import Framework"></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><strong>NetworkKitExample</strong> project provides a guidance to get started.</p>
+
+<p>For the purpose of this example, let say we want to download one of the stories from Hacker News. For this let's use their API endpoint - <a href="https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty">https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty</a>, which give us the following <strong>JSON</strong> response:</p>
+
+<p><a href="https://www.getpostman.com/run-collection/aa59a52596f959def779"><img src="https://run.pstmn.io/button.png" alt="Run in Postman"></a></p>
+
+<div class="highlight highlight-source-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>by<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>jergason<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-c1">11245652</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>kids<span class="pl-pds">"</span></span>: [
+    <span class="pl-c1">11245801</span>,
+    <span class="pl-c1">11245962</span>,
+    <span class="pl-c1">11250239</span>,
+    <span class="pl-c1">11246046</span>
+  ],
+  <span class="pl-s"><span class="pl-pds">"</span>time<span class="pl-pds">"</span></span>: <span class="pl-c1">1457449896</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>title<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>CocoaPods downloads max out five GitHub server CPUs<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>story<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p>We want to deserialize the JSON response above to <strong>Swift object</strong>. To do this, we need a <strong>struct</strong> that conforms the protocol <strong>Deserializable</strong> and implement the <strong>required init(data: [String: AnyObject])</strong> constructor and use the deserialization operator (<code>&lt;--</code>):</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">struct</span> NKItem: Deserializable {
+    <span class="pl-k">var</span> id: <span class="pl-c1">Int</span>?
+    <span class="pl-k">var</span> username: <span class="pl-c1">String</span>?
+    <span class="pl-k">var</span> kids: [<span class="pl-c1">Int</span>]?
+    <span class="pl-k">var</span> title: <span class="pl-c1">String</span>?
+    <span class="pl-k">var</span> type: <span class="pl-c1">String</span>?
+    <span class="pl-k">var</span> date: NSDate?
+
+    <span class="pl-k">init</span>(data: [<span class="pl-c1">String</span> <span class="pl-k">:</span> <span class="pl-c1">AnyObject</span>]) {
+        id <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>]
+        username <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>by<span class="pl-pds">"</span></span>]
+        kids <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>kids<span class="pl-pds">"</span></span>]
+        title <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>title<span class="pl-pds">"</span></span>]
+        type <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>]
+        date <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>time<span class="pl-pds">"</span></span>]
+    }
+}</pre></div>
+
+<p>To connect to an API and perform a <strong>GET</strong> request is simple and intuitive and parsing is like <strong>magic</strong>:</p>
+
+<div class="highlight highlight-source-swift"><pre>NKHTTPRequest<span class="pl-k">.</span>GET(
+  <span class="pl-s"><span class="pl-pds">"</span>https://hacker-news.firebaseio.com/v0/item/11245652.json<span class="pl-pds">"</span></span>,                
+  params: [<span class="pl-s"><span class="pl-pds">"</span>print<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>pretty<span class="pl-pds">"</span></span>],
+  success: { data <span class="pl-k">in</span>
+      <span class="pl-k">var</span> item: NKItem?
+      item <span class="pl-k">&lt;--</span> data                                        
+  },
+  failure: { error <span class="pl-k">in</span>
+      <span class="pl-c1">print</span>(error<span class="pl-k">.</span>message)
+  })</pre></div>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API</h2>
+
+<h3>
+<a id="networking" class="anchor" href="#networking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Networking</h3>
+
+<h4>
+<a id="get" class="anchor" href="#get" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GET</h4>
+
+<p>A simple HTTP GET method to get request from a url.</p>
+
+<p><strong>urlString</strong> - <code>String</code> <br>
+The string representing the url. <br></p>
+
+<p><strong>auth (Optional)</strong> - <code>NKOauth?</code> <br>
+Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
+NKOauth(consumerKey: "", consumerSecret: ""). <br></p>
+
+<p><strong>params (Optional)</strong> - <code>[NSObject: AnyObject]?</code> <br>
+The parameters you need to pass with the GET method. Everything after '?'. <br></p>
+
+<p><strong>success</strong> - <code>((AnyObject) -&gt; Void)</code> <br>
+Successful closure in case the request was successful. <br></p>
+
+<p><strong>failure</strong> -  <code>((NKHTTPRequestError) -&gt; Void)</code> <br>
+Failure Closure which notifies if any error has occurred during the request. <br></p>
+
+<h4>
+<a id="post" class="anchor" href="#post" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>POST</h4>
+
+<p>A simple HTTP POST method to post a resource to the url.</p>
+
+<p><strong>urlString</strong> - <code>String</code> <br>
+The string representing the url.</p>
+
+<p><strong>auth (Optional)</strong> - <code>NKOauth?</code> <br>
+Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
+NKOauth(consumerKey: "", consumerSecret: ""). <br></p>
+
+<p><strong>params (Optional)</strong> - <code>[NSObject: AnyObject]?</code> <br>
+The body you need to pass with the POST method. Resources you want to pass. <br></p>
+
+<p><strong>success</strong> - <code>((AnyObject) -&gt; Void)</code> <br>
+Successful closure in case the request was successful. <br></p>
+
+<p><strong>failure</strong> -  <code>((NKHTTPRequestError) -&gt; Void)</code> <br>
+Failure Closure which notifies if any error has occured during the request. <br></p>
+
+<h4>
+<a id="delete" class="anchor" href="#delete" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DELETE</h4>
+
+<p>A simple HTTP DELETE method to delete a resource from the server.</p>
+
+<p><strong>urlString</strong> - <code>String</code> <br>
+The string representing the url. <br></p>
+
+<p><strong>auth (Optional)</strong> - <code>NKOauth?</code> <br>
+Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
+NKOauth(consumerKey: "", consumerSecret: ""). <br></p>
+
+<p><strong>params (Optional)</strong> - <code>[NSObject: AnyObject]?</code> <br>
+The body you need to pass with the DELETE method. Resources you want to delete. <br></p>
+
+<p><strong>success</strong> - <code>((AnyObject) -&gt; Void)</code> <br>
+Successful closure in case the request was successful. <br></p>
+
+<p><strong>failure</strong> -  <code>((NKHTTPRequestError) -&gt; Void)</code> <br>
+Failure Closure which notifies if any error has occured during the request. <br></p>
+
+<h4>
+<a id="oauth-20" class="anchor" href="#oauth-20" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OAuth 2.0</h4>
+
+<p>Or if you need OAuth 2.0 to use an API, that's also simple, just include the auth <strong>consumer key</strong> and <strong>consumer secret</strong> when you perform a request:</p>
+
+<div class="highlight highlight-source-swift"><pre>NKHTTPRequest<span class="pl-k">.</span>GET(
+  <span class="pl-s"><span class="pl-pds">"</span>https://hacker-news.firebaseio.com/v0/item/11245652.json<span class="pl-pds">"</span></span>,
+  auth: NKOauth(consumerKey: <span class="pl-s"><span class="pl-pds">"</span>consumerKey<span class="pl-pds">"</span></span>, consumerSecret: <span class="pl-s"><span class="pl-pds">"</span>consumerSecret<span class="pl-pds">"</span></span>),
+  params: [<span class="pl-s"><span class="pl-pds">"</span>print<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>pretty<span class="pl-pds">"</span></span>],
+  success: { data <span class="pl-k">in</span>
+      <span class="pl-k">var</span> item: NKEItem?
+      item <span class="pl-k">&lt;--</span> data
+  },
+  failure: { error <span class="pl-k">in</span>
+      <span class="pl-c1">print</span>(error<span class="pl-k">.</span>message)
+  })</pre></div>
+
+<h4>
+<a id="cancel-http-requests" class="anchor" href="#cancel-http-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cancel HTTP Requests</h4>
+
+<p>There are error and internet availablity checking implemented in the framework, but you can simply cancel any task you want if its needed:</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> dataTask <span class="pl-k">=</span> NKHTTPRequest<span class="pl-k">.</span>GET(
+  <span class="pl-s"><span class="pl-pds">"</span>https://hacker-news.firebaseio.com/v0/item/11245652.json<span class="pl-pds">"</span></span>,
+  params: [<span class="pl-s"><span class="pl-pds">"</span>print<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>pretty<span class="pl-pds">"</span></span>],
+  success: { data <span class="pl-k">in</span>
+
+  },
+  failure: { error <span class="pl-k">in</span>
+    <span class="pl-c1">print</span>(error<span class="pl-k">.</span>message)
+})
+
+dataTask?<span class="pl-k">.</span>cancel()</pre></div>
+
+<h3>
+<a id="parsing" class="anchor" href="#parsing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parsing</h3>
+
+<p>Simple use of parsing can be seen above. There are more advanced options to use</p>
+
+<h4>
+<a id="assigning-default-values" class="anchor" href="#assigning-default-values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assigning default values</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">struct</span> NKItem: Deserializable {
+    <span class="pl-k">var</span> id <span class="pl-k">=</span> <span class="pl-c1">0</span>
+    <span class="pl-k">var</span> username <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+
+    <span class="pl-k">init</span>(data: [<span class="pl-c1">String</span> <span class="pl-k">:</span> <span class="pl-c1">AnyObject</span>]) {
+        id <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>]
+        username <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>by<span class="pl-pds">"</span></span>]
+    }
+}</pre></div>
+
+<h4>
+<a id="nsurl-deserialization" class="anchor" href="#nsurl-deserialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NSURL Deserialization</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> profileImage: NSURL?
+profileImage <span class="pl-k">&lt;--</span> <span class="pl-s"><span class="pl-pds">"</span>https://example.com/images/profile_normal.png<span class="pl-pds">"</span></span></pre></div>
+
+<h4>
+<a id="nsdate-deserialization" class="anchor" href="#nsdate-deserialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NSDate Deserialization</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> date: NSDate?
+date <span class="pl-k">&lt;--</span> <span class="pl-c1">1414172803</span> <span class="pl-c">// timestamp to NSDate deserialization</span></pre></div>
+
+<h4>
+<a id="nested-json" class="anchor" href="#nested-json" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nested JSON</h4>
+
+<p>Let's consider a the truncated version of the Twitter API response:</p>
+
+<p><a href="https://www.getpostman.com/run-collection/aa59a52596f959def779"><img src="https://run.pstmn.io/button.png" alt="Run in Postman"></a></p>
+
+<div class="highlight highlight-source-json"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Aggressive Ponytail #freebandnames<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>retweet_count<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>:{  
+      <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Sean Cummings<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>location<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>LA, CA<span class="pl-pds">"</span></span>,
+      <span class="pl-s"><span class="pl-pds">"</span>verified<span class="pl-pds">"</span></span>:<span class="pl-c1">false</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>screen_name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>sean_cummings<span class="pl-pds">"</span></span>
+  }
+}</pre></div>
+
+<p>Where you can just simply create a User and a Tweet structure with a user instance inside:</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">struct</span> NKTwitterUser: Deserializable {
+    <span class="pl-k">var</span> name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+    <span class="pl-k">var</span> location <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+    <span class="pl-k">var</span> verified <span class="pl-k">=</span> <span class="pl-c1">false</span>
+    <span class="pl-k">var</span> screenName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+
+    <span class="pl-k">init</span>(data: [<span class="pl-c1">String</span> <span class="pl-k">:</span> <span class="pl-c1">AnyObject</span>]) {
+        name <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]
+        location <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>location<span class="pl-pds">"</span></span>]
+        verified <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>verified<span class="pl-pds">"</span></span>]
+        screenName <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>screen_name<span class="pl-pds">"</span></span>]
+    }
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">struct</span> NKTweet: Deserializable {
+    <span class="pl-k">var</span> text <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+    <span class="pl-k">var</span> retweetCount <span class="pl-k">=</span> <span class="pl-c1">0</span>
+    <span class="pl-k">var</span> user: NKTwitterUser?
+
+    <span class="pl-k">init</span>(data: [<span class="pl-c1">String</span> <span class="pl-k">:</span> <span class="pl-c1">AnyObject</span>]) {
+        text <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>]
+        retweetCount <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>retweet_count<span class="pl-pds">"</span></span>]
+        user <span class="pl-k">&lt;--</span> data[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>]
+    }
+}</pre></div>
+
+<p>It's that simple.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT ⓒ Alex Telek</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/imex94/NetworkKit/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/imex94/NetworkKit/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/imex94/NetworkKit"></a> is maintained by <a href="https://github.com/imex94">imex94</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
