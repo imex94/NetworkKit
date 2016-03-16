@@ -9,9 +9,9 @@ A lightweight iOS, Mac and Watch OS framework that makes networking and parsing 
 
 ### Framework
 
-Download **NetworkKit.framework** file in the Framework folder and drag it into your application.
+Download **NetworkKit.framework** and **AuthFramework.framework** files in the Framework folder and drag them into your application.
 
-Make sure you copy the framework into the project directory and in side the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the framework.
+Make sure you copy the frameworks into the project directory and in side the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the frameworks.
 
 ![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework")
 

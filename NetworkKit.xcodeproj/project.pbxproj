@@ -33,6 +33,7 @@
 		2BFCC4CC1C91C0E000FD0CA9 /* NKTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C81C91C0E000FD0CA9 /* NKTweet.swift */; };
 		2BFCC4CF1C91C1CB00FD0CA9 /* hcNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CD1C91C1CB00FD0CA9 /* hcNews.json */; };
 		2BFCC4D01C91C1CB00FD0CA9 /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CE1C91C1CB00FD0CA9 /* twitter.json */; };
+		8E498CA91C98A51A005807A3 /* AuthFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD3D3B21C92E3400080BC62 /* AuthFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD3D3DE1C92EEC90080BC62 /* NetworkKit.framework in Frameworks */,
+				8E498CA91C98A51A005807A3 /* AuthFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +578,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = NetworkKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitExample;
@@ -587,6 +593,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = NetworkKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitExample;
