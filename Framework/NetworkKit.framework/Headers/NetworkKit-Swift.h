@@ -92,6 +92,8 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 
+
+/// Create an HTTP Request
 SWIFT_CLASS("_TtC10NetworkKit13NKHTTPRequest")
 @interface NKHTTPRequest : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
