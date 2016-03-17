@@ -1,6 +1,0 @@
-framework module AuthFramework {
-  umbrella header "AuthFramework.h"
-
-  export *
-  module * { export * }
-}

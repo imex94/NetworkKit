@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/imex94/NetworkKit.svg?branch=master)](https://travis-ci.org/imex94/NetworkKit)
 [![Available devices](https://camo.githubusercontent.com/30f3ea607a65990e8cf2d6e11a48602167399324/68747470733a2f2f636f636f61706f642d6261646765732e6865726f6b756170702e636f6d2f702f41464e6574776f726b696e672f62616467652e706e67)]()
-[![CI Status](http://img.shields.io/travis/Alex Telek/NetworkKit.svg?style=flat)](https://travis-ci.org/Alex Telek/NetworkKit)
 [![Version](https://img.shields.io/cocoapods/v/NetworkKit.svg?style=flat)](http://cocoapods.org/pods/NetworkKit)
 
 A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic **GET**, **POST**, **DELETE** HTTP requests.
@@ -25,9 +24,9 @@ pod "NetworkKit"
 
 ### Framework
 
-Download **NetworkKit.framework** and **AuthFramework.framework** files in the Framework folder and drag them into your application.
+Download **NetworkKit.framework** file from the Framework folder and drag it into your application.
 
-Make sure you copy the frameworks into the project directory and in side the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the frameworks.
+Make sure you copy the framework into the project directory and inside the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the framework.
 
 ![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework")
 
@@ -153,7 +152,7 @@ Successful closure in case the request was successful. <br />
 **failure** -  `((NKHTTPRequestError) -> Void)` <br />
 Failure Closure which notifies if any error has occured during the request. <br />
 
-#### OAuth 2.0
+<!-- #### OAuth 2.0
 
 Or if you need OAuth 2.0 to use an API, that's also simple, just include the auth **consumer key** and **consumer secret** when you perform a request:
 
@@ -169,11 +168,11 @@ NKHTTPRequest.GET(
   failure: { error in
       print(error.message)
   })
-```
+``` -->
 
 #### Cancel HTTP Requests
 
-There are error and internet availablity checking implemented in the framework, but you can simply cancel any task you want if its needed:
+There are error and internet availability checking implemented in the framework, but you can simply cancel any task you want if its needed:
 
 ```swift
 let dataTask = NKHTTPRequest.GET(
