@@ -28,7 +28,7 @@ Download **NetworkKit.framework** file from the Framework folder and drag it int
 
 Make sure you copy the framework into the project directory and inside the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the framework.
 
-![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework")
+![Import Framework](https://github.com/imex94/NetworkKit/blob/v1.3/images/import.png "Import Framework")
 
 ## Usage
 
