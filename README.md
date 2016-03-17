@@ -57,6 +57,10 @@ For the purpose of this example, let say we want to download one of the stories 
 We want to deserialize the JSON response above to **Swift object**. To do this, we need a **struct** that conforms the protocol **Deserializable** and implement the **required init(data: [String: AnyObject])** constructor and use the deserialization operator (`<--`):
 
 ```swift
+import NetworkKit
+```
+
+```swift
 struct NKItem: Deserializable {
     var id: Int?
     var username: String?

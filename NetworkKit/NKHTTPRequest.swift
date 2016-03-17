@@ -24,7 +24,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import UIKit
+import Foundation
 
 /// HTTP Request error that can occur during network fetching or
 /// parsing the data
@@ -73,13 +73,17 @@ public class NKHTTPRequest: NSObject {
      */
     public class func GET(var urlString: String, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
         
+        #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
             failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
-        
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
+        #endif
+            
+        #if os(iOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
+            
         if let params = params {
             urlString += "?"
             var counter = 0
@@ -115,13 +119,17 @@ public class NKHTTPRequest: NSObject {
      */
     public class func POST(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
      
+        #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
             failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
+        #endif
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
+        #if os(iOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
+            
         guard let url = NSURL(string: urlString) else {
             
             failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
@@ -147,12 +155,16 @@ public class NKHTTPRequest: NSObject {
      */
     public class func DELETE(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
         
+        #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
             failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
-        
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
+            
+        #if os(iOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
         
         guard let url = NSURL(string: urlString) else {
             
@@ -172,7 +184,9 @@ public class NKHTTPRequest: NSObject {
         
         let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) { (d, r, e) -> Void in
             
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            #if os(iOS)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            #endif
             
             guard (e == nil) else {
                 

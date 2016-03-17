@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB9D8301C9AEF5500A9F47B /* NetworkKitMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9D82F1C9AEF5500A9F47B /* NetworkKitMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BB9D8371C9AEFD600A9F47B /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
+		2BB9D8381C9AEFD600A9F47B /* NKJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */; };
+		2BB9D8391C9AEFD600A9F47B /* NKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */; };
+		2BB9D84D1C9AF89000A9F47B /* NetworkKitWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9D84C1C9AF89000A9F47B /* NetworkKitWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BB9D8521C9AF89900A9F47B /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
+		2BB9D8531C9AF89900A9F47B /* NKJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */; };
+		2BB9D8541C9AF89900A9F47B /* NKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */; };
+		2BB9D85D1C9AF95000A9F47B /* NetworkKitTvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9D85C1C9AF95000A9F47B /* NetworkKitTvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BB9D8621C9AF95B00A9F47B /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
+		2BB9D8631C9AF95B00A9F47B /* NKJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */; };
+		2BB9D8641C9AF95B00A9F47B /* NKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */; };
 		2BD3D3CD1C92EE920080BC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */; };
 		2BD3D3CF1C92EE920080BC62 /* NKEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */; };
 		2BD3D3D21C92EE920080BC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3D3D01C92EE920080BC62 /* Main.storyboard */; };
@@ -46,6 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB9D82F1C9AEF5500A9F47B /* NetworkKitMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKitMac.h; sourceTree = "<group>"; };
+		2BB9D8311C9AEF5500A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB9D84A1C9AF89000A9F47B /* NetworkKitWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKitWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB9D84C1C9AF89000A9F47B /* NetworkKitWatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKitWatchOS.h; sourceTree = "<group>"; };
+		2BB9D84E1C9AF89000A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKitTvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB9D85C1C9AF95000A9F47B /* NetworkKitTvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKitTvOS.h; sourceTree = "<group>"; };
+		2BB9D85E1C9AF95000A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKEViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +93,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2BB9D8291C9AEF5400A9F47B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8461C9AF89000A9F47B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8561C9AF95000A9F47B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BD3D3C71C92EE920080BC62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +140,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BB9D82E1C9AEF5500A9F47B /* NetworkKitMac */ = {
+			isa = PBXGroup;
+			children = (
+				2BB9D82F1C9AEF5500A9F47B /* NetworkKitMac.h */,
+				2BB9D8311C9AEF5500A9F47B /* Info.plist */,
+			);
+			path = NetworkKitMac;
+			sourceTree = "<group>";
+		};
+		2BB9D84B1C9AF89000A9F47B /* NetworkKitWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				2BB9D84C1C9AF89000A9F47B /* NetworkKitWatchOS.h */,
+				2BB9D84E1C9AF89000A9F47B /* Info.plist */,
+			);
+			path = NetworkKitWatchOS;
+			sourceTree = "<group>";
+		};
+		2BB9D85B1C9AF95000A9F47B /* NetworkKitTvOS */ = {
+			isa = PBXGroup;
+			children = (
+				2BB9D85C1C9AF95000A9F47B /* NetworkKitTvOS.h */,
+				2BB9D85E1C9AF95000A9F47B /* Info.plist */,
+			);
+			path = NetworkKitTvOS;
+			sourceTree = "<group>";
+		};
 		2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +211,9 @@
 				2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */,
 				2BFCC4A51C91B8D500FD0CA9 /* NetworkKit */,
 				2BFCC4B51C91C0B000FD0CA9 /* NetworkKitTests */,
+				2BB9D82E1C9AEF5500A9F47B /* NetworkKitMac */,
+				2BB9D84B1C9AF89000A9F47B /* NetworkKitWatchOS */,
+				2BB9D85B1C9AF95000A9F47B /* NetworkKitTvOS */,
 				2BFCC4A41C91B8D500FD0CA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,6 +224,9 @@
 				2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */,
 				2BFCC4B41C91C0B000FD0CA9 /* NetworkKitTests.xctest */,
 				2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */,
+				2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */,
+				2BB9D84A1C9AF89000A9F47B /* NetworkKitWatchOS.framework */,
+				2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +261,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2BB9D82A1C9AEF5400A9F47B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB9D8301C9AEF5500A9F47B /* NetworkKitMac.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8471C9AF89000A9F47B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB9D84D1C9AF89000A9F47B /* NetworkKitWatchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8571C9AF95000A9F47B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB9D85D1C9AF95000A9F47B /* NetworkKitTvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BFCC4A01C91B8D500FD0CA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +296,61 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2BB9D82C1C9AEF5400A9F47B /* NetworkKitMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB9D8321C9AEF5500A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitMac" */;
+			buildPhases = (
+				2BB9D8281C9AEF5400A9F47B /* Sources */,
+				2BB9D8291C9AEF5400A9F47B /* Frameworks */,
+				2BB9D82A1C9AEF5400A9F47B /* Headers */,
+				2BB9D82B1C9AEF5400A9F47B /* Resources */,
+				2BB9D8351C9AEF6B00A9F47B /* Build Number */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkKitMac;
+			productName = NetworkKitMac;
+			productReference = 2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BB9D8491C9AF89000A9F47B /* NetworkKitWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB9D84F1C9AF89000A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitWatchOS" */;
+			buildPhases = (
+				2BB9D8451C9AF89000A9F47B /* Sources */,
+				2BB9D8461C9AF89000A9F47B /* Frameworks */,
+				2BB9D8471C9AF89000A9F47B /* Headers */,
+				2BB9D8481C9AF89000A9F47B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkKitWatchOS;
+			productName = NetworkKitWatchOS;
+			productReference = 2BB9D84A1C9AF89000A9F47B /* NetworkKitWatchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BB9D8591C9AF95000A9F47B /* NetworkKitTvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB9D85F1C9AF95000A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitTvOS" */;
+			buildPhases = (
+				2BB9D8551C9AF95000A9F47B /* Sources */,
+				2BB9D8561C9AF95000A9F47B /* Frameworks */,
+				2BB9D8571C9AF95000A9F47B /* Headers */,
+				2BB9D8581C9AF95000A9F47B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkKitTvOS;
+			productName = NetworkKitTvOS;
+			productReference = 2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2BD3D3C91C92EE920080BC62 /* NetworkKitExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD3D3D91C92EE920080BC62 /* Build configuration list for PBXNativeTarget "NetworkKitExample" */;
@@ -263,6 +417,15 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = alextelek;
 				TargetAttributes = {
+					2BB9D82C1C9AEF5400A9F47B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2BB9D8491C9AF89000A9F47B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					2BB9D8591C9AF95000A9F47B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					2BD3D3C91C92EE920080BC62 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -290,11 +453,35 @@
 				2BD3D3C91C92EE920080BC62 /* NetworkKitExample */,
 				2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */,
 				2BFCC4B31C91C0B000FD0CA9 /* NetworkKitTests */,
+				2BB9D82C1C9AEF5400A9F47B /* NetworkKitMac */,
+				2BB9D8491C9AF89000A9F47B /* NetworkKitWatchOS */,
+				2BB9D8591C9AF95000A9F47B /* NetworkKitTvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2BB9D82B1C9AEF5400A9F47B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8481C9AF89000A9F47B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8581C9AF95000A9F47B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BD3D3C81C92EE920080BC62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +511,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BB9D8351C9AEF6B00A9F47B /* Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 		2BFCC4AE1C91B8E800FD0CA9 /* Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +556,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2BB9D8281C9AEF5400A9F47B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB9D8371C9AEFD600A9F47B /* NKHTTPRequest.swift in Sources */,
+				2BB9D8381C9AEFD600A9F47B /* NKJSONHelper.swift in Sources */,
+				2BB9D8391C9AEFD600A9F47B /* NKReachability.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8451C9AF89000A9F47B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB9D8521C9AF89900A9F47B /* NKHTTPRequest.swift in Sources */,
+				2BB9D8531C9AF89900A9F47B /* NKJSONHelper.swift in Sources */,
+				2BB9D8541C9AF89900A9F47B /* NKReachability.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB9D8551C9AF95000A9F47B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB9D8621C9AF95B00A9F47B /* NKHTTPRequest.swift in Sources */,
+				2BB9D8631C9AF95B00A9F47B /* NKJSONHelper.swift in Sources */,
+				2BB9D8641C9AF95B00A9F47B /* NKReachability.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BD3D3C61C92EE920080BC62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +653,126 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2BB9D8331C9AEF5500A9F47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = NetworkKitMac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2BB9D8341C9AEF5500A9F47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = NetworkKitMac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2BB9D8501C9AF89000A9F47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkKitWatchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		2BB9D8511C9AF89000A9F47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkKitWatchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		2BB9D8601C9AF95000A9F47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkKitTvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		2BB9D8611C9AF95000A9F47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkKitTvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 		2BD3D3DA1C92EE920080BC62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -601,6 +952,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2BB9D8321C9AEF5500A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB9D8331C9AEF5500A9F47B /* Debug */,
+				2BB9D8341C9AEF5500A9F47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2BB9D84F1C9AF89000A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB9D8501C9AF89000A9F47B /* Debug */,
+				2BB9D8511C9AF89000A9F47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2BB9D85F1C9AF95000A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitTvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB9D8601C9AF95000A9F47B /* Debug */,
+				2BB9D8611C9AF95000A9F47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2BD3D3D91C92EE920080BC62 /* Build configuration list for PBXNativeTarget "NetworkKitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

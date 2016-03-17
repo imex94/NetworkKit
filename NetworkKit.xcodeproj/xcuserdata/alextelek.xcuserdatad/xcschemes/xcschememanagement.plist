@@ -12,6 +12,11 @@
 		<key>NetworkKitExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>NetworkKitMac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
 		<key>NetworkKitTests.xcscheme_^#shared#^_</key>
@@ -19,9 +24,34 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>NetworkKitTvOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>NetworkKitWatchOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2BB9D82C1C9AEF5400A9F47B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BB9D8491C9AF89000A9F47B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BB9D8591C9AF95000A9F47B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2BD3D3B11C92E3400080BC62</key>
 		<dict>
 			<key>primary</key>

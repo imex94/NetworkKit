@@ -24,7 +24,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import UIKit
+#if os(watchOS)
+#else
+import Foundation
 import SystemConfiguration
 
 /// reachability class for checking if the internet connection is available
@@ -56,3 +58,4 @@ class NKReachability: NSObject {
         return (isReachable && !needsConnection)
     }
 }
+#endif
