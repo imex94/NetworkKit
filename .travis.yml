@@ -1,7 +1,4 @@
 language: objective-c
 osx_image: xcode7.2
 
-xcode_project: NetworkKit.xcodeproj
-xcode_scheme: NetworkKit
-
 script: 'sh scripts/travis.sh'
