@@ -1,11 +1,27 @@
-# NetworkKit ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png) 
+# NetworkKit ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 
 [![Build Status](https://travis-ci.org/imex94/NetworkKit.svg?branch=master)](https://travis-ci.org/imex94/NetworkKit)
 [![Available devices](https://camo.githubusercontent.com/30f3ea607a65990e8cf2d6e11a48602167399324/68747470733a2f2f636f636f61706f642d6261646765732e6865726f6b756170702e636f6d2f702f41464e6574776f726b696e672f62616467652e706e67)]()
+[![CI Status](http://img.shields.io/travis/Alex Telek/NetworkKit.svg?style=flat)](https://travis-ci.org/Alex Telek/NetworkKit)
+[![Version](https://img.shields.io/cocoapods/v/NetworkKit.svg?style=flat)](http://cocoapods.org/pods/NetworkKit)
 
 A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic **GET**, **POST**, **DELETE** HTTP requests.
 
 ## Install
+
+<!-- ### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```
+$ gem install cocoapods
+```
+
+To install it, simply add the following line to your Podfile:
+
+```ruby
+pod "NetworkKit"
+``` -->
 
 ### Framework
 
@@ -22,7 +38,7 @@ Make sure you copy the frameworks into the project directory and in side the **P
 For the purpose of this example, let say we want to download one of the stories from Hacker News. For this let's use their API endpoint - https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty, which give us the following **JSON** response:
 
 
-[![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
 
 ```json
 {
@@ -209,7 +225,7 @@ date <-- 1414172803 // timestamp to NSDate deserialization
 
 Let's consider a the truncated version of the Twitter API response:
 
-[![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
 
 ```json
 {
@@ -260,4 +276,5 @@ It's that simple.
 
 ## License
 
+NetworkKit is available under the MIT license. See the LICENSE file for more info.
 MIT ⓒ Alex Telek
