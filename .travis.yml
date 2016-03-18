@@ -5,6 +5,4 @@ xcode_project: NetworkKit.xcodeproj
 xcode_scheme: NetworkKitTests
 
 script:
-- xcodebuild clean build test -project NetworkKit.xcodeproj -scheme NetworkKitTests
-CODE_SIGN_IDENTITY=""
-CODE_SIGNING_REQUIRED=NO
+  xctool -sdk iphonesimulator -project NetworkKit.xcodeproj -scheme NetworkKitTests clean build test
