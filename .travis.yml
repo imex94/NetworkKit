@@ -1,4 +1,8 @@
 language: objective-c
 osx_image: xcode7.2
 
-script: 'sh scripts/travis.sh'
+xcode_project: NetworkKit.xcodeproj
+xcode_scheme: NetworkKitTests
+
+script:
+- xcodebuild clean build test -project NetworkKit.xcodeproj -scheme NetworkKitTests
