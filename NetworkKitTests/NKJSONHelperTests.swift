@@ -86,7 +86,7 @@ class NKJSONHelperTests: XCTestCase {
             "screen_name": "sean_cummings"
             ])
         
-        XCTAssertEqual(tweet.id, 250075927172759552)
+        XCTAssertEqual(tweet.id, NSNumber(longLong: 250075927172759552))
         XCTAssertEqual(tweet.retweetCount, 0)
         XCTAssertEqual(tweet.text, "Aggressive Ponytail #freebandnames")
         XCTAssertEqual(tweet.user!, expectedUser)
