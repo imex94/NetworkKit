@@ -6,3 +6,5 @@ xcode_scheme: NetworkKitTests
 
 script:
 - xcodebuild clean build test -project NetworkKit.xcodeproj -scheme NetworkKitTests
+CODE_SIGN_IDENTITY=""
+CODE_SIGNING_REQUIRED=NO
