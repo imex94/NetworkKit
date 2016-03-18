@@ -31,7 +31,7 @@ import NetworkKit
 extension NKTweet: Equatable { }
 
 func ==(lhs: NKTweet, rhs: NKTweet) -> Bool {
-    return lhs.text == rhs.text && lhs.retweetCount == rhs.retweetCount && lhs.id == rhs.id && lhs.user == rhs.user
+    return lhs.text == rhs.text && lhs.retweetCount == rhs.retweetCount && lhs.user == rhs.user
 }
 
 extension NKTwitterUser: Equatable { }
@@ -61,13 +61,11 @@ struct NKTwitterUser: Deserializable {
 struct NKTweet: Deserializable {
     var text = ""
     var retweetCount = 0
-    var id = 0
     var user: NKTwitterUser?
     
     init(data: [String : AnyObject]) {
         text <-- data["text"]
         retweetCount <-- data["retweet_count"]
-        id <-- data["id"]
         user <-- data["user"]
     }
 }
