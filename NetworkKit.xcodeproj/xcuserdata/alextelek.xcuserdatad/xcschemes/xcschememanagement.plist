@@ -9,7 +9,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>NetworkKitExample.xcscheme</key>
+		<key>NetworkKitExample.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -19,7 +19,7 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>NetworkKitMacTests.xcscheme</key>
+		<key>NetworkKitMacTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
@@ -34,7 +34,7 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>NetworkKitTvOSTests.xcscheme</key>
+		<key>NetworkKitTvOSTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
