@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BB9D8951C9F1A4900A9F47B"
+               BuildableName = "NetworkKitTvOSTests.xctest"
+               BlueprintName = "NetworkKitTvOSTests"
+               ReferencedContainer = "container:NetworkKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BB9D8591C9AF95000A9F47B"
+            BuildableName = "NetworkKitTvOS.framework"
+            BlueprintName = "NetworkKitTvOS"
+            ReferencedContainer = "container:NetworkKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
