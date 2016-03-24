@@ -1,19 +1,34 @@
-# NetworkKit ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png) 
+# NetworkKit ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 
 [![Build Status](https://travis-ci.org/imex94/NetworkKit.svg?branch=master)](https://travis-ci.org/imex94/NetworkKit)
 [![Available devices](https://camo.githubusercontent.com/30f3ea607a65990e8cf2d6e11a48602167399324/68747470733a2f2f636f636f61706f642d6261646765732e6865726f6b756170702e636f6d2f702f41464e6574776f726b696e672f62616467652e706e67)]()
+[![Version](https://img.shields.io/cocoapods/v/NetworkKit.svg?style=flat)](http://cocoapods.org/pods/NetworkKit)
 
 A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic **GET**, **POST**, **DELETE** HTTP requests.
 
 ## Install
 
+<!-- ### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```
+$ gem install cocoapods
+```
+
+To install it, simply add the following line to your Podfile:
+
+```ruby
+pod "NetworkKit"
+``` -->
+
 ### Framework
 
-Download **NetworkKit.framework** and **AuthFramework.framework** files in the Framework folder and drag them into your application.
+Download **NetworkKit.framework** file from the Framework folder and drag it into your application.
 
-Make sure you copy the frameworks into the project directory and in side the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the frameworks.
+Make sure you copy the framework into the project directory and inside the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the framework.
 
-![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import.png "Import Framework")
+![Import Framework](https://github.com/imex94/NetworkKit/blob/v1.3/images/import.png "Import Framework")
 
 ## Usage
 
@@ -22,7 +37,7 @@ Make sure you copy the frameworks into the project directory and in side the **P
 For the purpose of this example, let say we want to download one of the stories from Hacker News. For this let's use their API endpoint - https://hacker-news.firebaseio.com/v0/item/11245652.json?print=pretty, which give us the following **JSON** response:
 
 
-[![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
 
 ```json
 {
@@ -40,6 +55,10 @@ For the purpose of this example, let say we want to download one of the stories 
 }
 ```
 We want to deserialize the JSON response above to **Swift object**. To do this, we need a **struct** that conforms the protocol **Deserializable** and implement the **required init(data: [String: AnyObject])** constructor and use the deserialization operator (`<--`):
+
+```swift
+import NetworkKit
+```
 
 ```swift
 struct NKItem: Deserializable {
@@ -137,7 +156,7 @@ Successful closure in case the request was successful. <br />
 **failure** -  `((NKHTTPRequestError) -> Void)` <br />
 Failure Closure which notifies if any error has occured during the request. <br />
 
-#### OAuth 2.0
+<!-- #### OAuth 2.0
 
 Or if you need OAuth 2.0 to use an API, that's also simple, just include the auth **consumer key** and **consumer secret** when you perform a request:
 
@@ -153,11 +172,11 @@ NKHTTPRequest.GET(
   failure: { error in
       print(error.message)
   })
-```
+``` -->
 
 #### Cancel HTTP Requests
 
-There are error and internet availablity checking implemented in the framework, but you can simply cancel any task you want if its needed:
+There are error and internet availability checking implemented in the framework, but you can simply cancel any task you want if its needed:
 
 ```swift
 let dataTask = NKHTTPRequest.GET(
@@ -209,7 +228,7 @@ date <-- 1414172803 // timestamp to NSDate deserialization
 
 Let's consider a the truncated version of the Twitter API response:
 
-[![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/run-collection/aa59a52596f959def779)
 
 ```json
 {
@@ -260,4 +279,5 @@ It's that simple.
 
 ## License
 
+NetworkKit is available under the MIT license. See the LICENSE file for more info.
 MIT ⓒ Alex Telek

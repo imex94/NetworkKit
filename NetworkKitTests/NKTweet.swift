@@ -24,20 +24,18 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-
-import UIKit
 import NetworkKit
 
 extension NKTweet: Equatable { }
 
 func ==(lhs: NKTweet, rhs: NKTweet) -> Bool {
-    return lhs.text == rhs.text && lhs.retweetCount == rhs.retweetCount && lhs.id == rhs.id && lhs.user == rhs.user
+    return lhs.text == rhs.text && lhs.retweetCount == rhs.retweetCount && lhs.user == rhs.user
 }
 
 extension NKTwitterUser: Equatable { }
 
 func ==(lhs: NKTwitterUser, rhs: NKTwitterUser) -> Bool {
-    return lhs.name == rhs.name && lhs.location == rhs.location && lhs.profileImage == rhs.profileImage && lhs.followers == rhs.followers && lhs.verified == rhs.verified && lhs.screenName == rhs.screenName
+    return lhs.name == rhs.name && lhs.location == rhs.location && lhs.profileImage.absoluteString == rhs.profileImage.absoluteString && lhs.followers == rhs.followers && lhs.verified == rhs.verified && lhs.screenName == rhs.screenName
 }
 
 struct NKTwitterUser: Deserializable {
@@ -61,13 +59,11 @@ struct NKTwitterUser: Deserializable {
 struct NKTweet: Deserializable {
     var text = ""
     var retweetCount = 0
-    var id = 0
     var user: NKTwitterUser?
     
     init(data: [String : AnyObject]) {
         text <-- data["text"]
         retweetCount <-- data["retweet_count"]
-        id <-- data["id"]
         user <-- data["user"]
     }
 }

@@ -24,7 +24,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import UIKit
+import Foundation
 
 /// HTTP Request error that can occur during network fetching or
 /// parsing the data
@@ -58,13 +58,9 @@ public typealias NKHTTPRequestSuccessClosure = (AnyObject) -> Void
 /// Failure HTTP Request Closure
 public typealias NKHTTPRequestFailureClosure = (NKHTTPRequestError) -> Void
 
+/// Create an HTTP Request
 public class NKHTTPRequest: NSObject {
-    
-    public class func GET(urlString: String, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
-        
-        return GET(urlString, auth: nil, params: params, success: success, failure: failure)
-    }
-    
+
     /**
      A simple HTTP GET method to get request from a url.
      
@@ -75,63 +71,66 @@ public class NKHTTPRequest: NSObject {
      - failure: Failure Closure which notifies if any error has occured during the request.
      
      */
-    public class func GET(var urlString: String, auth: NKOauth?, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+    public class func GET(urlString: String, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
         
+        #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
             failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
+        #endif
+            
+        #if os(iOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
+        var urlS = urlString
         if let params = params {
-            urlString += "?"
+            urlS += "?"
             var counter = 0
             for (key, value) in params {
-                if counter == 0 { urlString += "\(key)=\(value)" }
+                if counter == 0 { urlS += "\(key)=\(value)" }
                 else {
-                    urlString += "&\(key)=\(value)"
+                    urlS += "&\(key)=\(value)"
                 }
-                counter++
+                counter += 1
             }
         }
         
-        guard let url = NSURL(string: urlString) else {
-            failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
+        guard let url = NSURL(string: urlS) else {
+            failure(.InvalidURL("ERROR: \(urlS) is an invalid URL for the HTTP Request."))
             return nil
         }
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        if auth != nil { request.setValue(NKAuthentication.authHeader(auth!).authenticationHeaderForRequest(request), forHTTPHeaderField: "Authorization") }
         
         return dataTaskWithRequest(request, success: success, failure: failure)
-    }
-    
-    public class func POST(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
-     
-        return POST(urlString, auth: nil, params: params, success: success, failure: failure)
     }
     
     /**
      A simple HTTP POST method to post a resource to the url.
      
      - Parameters:
-        - urlString: The string representing the url.
-        - params: The body you need to pass with the POST method. Resources you want to pass.
-        - success: Successful closure in case the request was successful.
-        - failure: Failure Closure which notifies if any error has occured during the request.
+     - urlString: The string representing the url.
+     - params: The body you need to pass with the POST method. Resources you want to pass.
+     - success: Successful closure in case the request was successful.
+     - failure: Failure Closure which notifies if any error has occured during the request.
      */
-    public class func POST(urlString: String, auth: NKOauth?, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
-        
+    public class func POST(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+     
+        #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
             failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
+        #endif
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
+        #if os(iOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
+            
         guard let url = NSURL(string: urlString) else {
             
             failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
@@ -142,33 +141,31 @@ public class NKHTTPRequest: NSObject {
         request.HTTPMethod = "POST"
         if params != nil { request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(params!, options: NSJSONWritingOptions.PrettyPrinted) }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        if auth != nil { request.setValue(NKAuthentication.authHeader(auth!).authenticationHeaderForRequest(request), forHTTPHeaderField: "Authorization") }
         
         return dataTaskWithRequest(request, success: success, failure: failure)
-    }
-    
-    public class func DELETE(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
-        
-        return DELETE(urlString, auth: nil, params: params, success: success, failure: failure)
     }
     
     /**
      A simple HTTP DELETE method to delete a resource from the server.
      
      - Parameters:
-        - urlString: The string representing the url.
-        - params: The body you need to pass with the DELETE method. Resources you want to delete.
-        - success: Successful closure in case the request was successful.
-        - failure: Failure Closure which notifies if any error has occured during the request.
+     - urlString: The string representing the url.
+     - params: The body you need to pass with the DELETE method. Resources you want to delete.
+     - success: Successful closure in case the request was successful.
+     - failure: Failure Closure which notifies if any error has occured during the request.
      */
-    public class func DELETE(urlString: String, auth: NKOauth?, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+    public class func DELETE(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
         
+        #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
             failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
-        
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
+            
+        #if os(iOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        #endif
         
         guard let url = NSURL(string: urlString) else {
             
@@ -180,7 +177,6 @@ public class NKHTTPRequest: NSObject {
         request.HTTPMethod = "DELETE"
         if params != nil { request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(params!, options: NSJSONWritingOptions.PrettyPrinted) }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        if auth != nil { request.setValue(NKAuthentication.authHeader(auth!).authenticationHeaderForRequest(request), forHTTPHeaderField: "Authorization") }
         
         return dataTaskWithRequest(request, success: success, failure: failure)
     }
@@ -189,7 +185,9 @@ public class NKHTTPRequest: NSObject {
         
         let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) { (d, r, e) -> Void in
             
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            #if os(iOS)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            #endif
             
             guard (e == nil) else {
                 

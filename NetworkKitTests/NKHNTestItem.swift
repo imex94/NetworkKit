@@ -24,14 +24,12 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-
-import UIKit
 import NetworkKit
 
 extension NKHNTestItem: Equatable { }
 
 func ==(lhs: NKHNTestItem, rhs: NKHNTestItem) -> Bool {
-    return lhs.id == rhs.id && lhs.username == rhs.username && lhs.title == rhs.title && lhs.type == rhs.type && lhs.parent == rhs.parent && lhs.date == rhs.date
+    return lhs.id == rhs.id && lhs.username == rhs.username && lhs.title == rhs.title && lhs.type == rhs.type && lhs.parent == rhs.parent
 }
 
 /**
