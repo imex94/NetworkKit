@@ -55,6 +55,9 @@ class NKHTTPRequestTests: XCTestCase {
     func testGETRequest() {
         let expectation = expectationWithDescription("Test GET HTTP Request")
         
+        var item: NKHNTestItem?
+        var errorMessage: String?
+        
         if !NKReachability.isNetworkAvailable() {
             XCTAssertTrue(true)
         } else {
@@ -63,29 +66,28 @@ class NKHTTPRequestTests: XCTestCase {
                 params: ["print": "pretty"],
                 success: { data in
                     
-                    XCTAssertNotNil(data)
-                    
-                    var item: NKHNTestItem?
                     item <-- data
-                    
-                    XCTAssertEqual(item, self.expectationItem)
                     
                     expectation.fulfill()
                 },
                 failure: { error in
-                    XCTFail(error.message)
+                    errorMessage = error.message
                     
                     expectation.fulfill()
             })
             
-            waitForExpectationsWithTimeout(10.0) { (error) -> Void in
-                print(error)
-            }
+            waitForExpectationsWithTimeout(10.0, handler: nil)
+            
+            XCTAssertEqual(item, self.expectationItem)
+            XCTAssertNil(errorMessage)
         }
     }
     
     func testHTTPRequestCancelledShouldResultWarning() {
         let expectation = expectationWithDescription("Test GET HTTP Request")
+        
+        var item: NKHNTestItem?
+        var errorMessage: String?
         
         if !NKReachability.isNetworkAvailable() {
             XCTAssertTrue(true)
@@ -95,31 +97,22 @@ class NKHTTPRequestTests: XCTestCase {
                 params: ["print": "pretty"],
                 success: { data in
                     
-                    XCTFail()
+                    item <-- data
                     
                     expectation.fulfill()
                 },
                 failure: { error in
-                    XCTAssertNotNil(error)
+                    
+                    errorMessage = error.message
                     
                     expectation.fulfill()
             })
             task?.cancel()
             
-            waitForExpectationsWithTimeout(10.0) { (error) -> Void in
-                print(error)
-            }
-        }
-    }
-    
-    func testInternetAvailability() {
-        if NKReachability.isNetworkAvailable() {
+            waitForExpectationsWithTimeout(10.0, handler: nil)
             
-            XCTAssertTrue(NKReachability.isNetworkAvailable())
-            
-        } else {
-            
-            XCTAssertTrue(!NKReachability.isNetworkAvailable())
+            XCTAssertNil(item)
+            XCTAssertNotNil(errorMessage)
         }
     }
     
