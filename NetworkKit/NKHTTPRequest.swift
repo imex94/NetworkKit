@@ -79,10 +79,6 @@ public class NKHTTPRequest: NSObject {
             return nil
         }
         #endif
-            
-        #if os(iOS)
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        #endif
         
         var urlS = urlString
         if let params = params {
@@ -127,10 +123,6 @@ public class NKHTTPRequest: NSObject {
         }
         #endif
         
-        #if os(iOS)
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        #endif
-            
         guard let url = NSURL(string: urlString) else {
             
             failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
@@ -162,10 +154,6 @@ public class NKHTTPRequest: NSObject {
             return nil
         }
         #endif
-            
-        #if os(iOS)
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        #endif
         
         guard let url = NSURL(string: urlString) else {
             
@@ -184,10 +172,6 @@ public class NKHTTPRequest: NSObject {
     private class func dataTaskWithRequest(request: NSMutableURLRequest, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask {
         
         let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) { (d, r, e) -> Void in
-            
-            #if os(iOS)
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            #endif
             
             guard (e == nil) else {
                 

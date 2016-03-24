@@ -8,7 +8,7 @@ A lightweight iOS, Mac and Watch OS framework that makes networking and parsing 
 
 ## Install
 
-<!-- ### CocoaPods
+### Cocoapods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
@@ -16,19 +16,21 @@ A lightweight iOS, Mac and Watch OS framework that makes networking and parsing 
 $ gem install cocoapods
 ```
 
-To install it, simply add the following line to your Podfile:
+To install it, simply add the following line to your ```Podfile```:
 
 ```ruby
-pod "NetworkKit"
-``` -->
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
 
-### Framework
+pod 'NetworkKit'
+```
 
-Download **NetworkKit.framework** file from the Framework folder and drag it into your application.
+Then run the folloring command:
 
-Make sure you copy the framework into the project directory and inside the **Project Target** - **Build Phases** - **Link Binary With Libraries** you have added the framework.
-
-![Import Framework](https://github.com/imex94/NetworkKit/blob/v1.3/images/import.png "Import Framework")
+```
+$ pod install
+```
 
 ## Usage
 
