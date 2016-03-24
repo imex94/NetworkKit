@@ -24,8 +24,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-
-import UIKit
 import NetworkKit
 
 extension NKTweet: Equatable { }
@@ -37,7 +35,7 @@ func ==(lhs: NKTweet, rhs: NKTweet) -> Bool {
 extension NKTwitterUser: Equatable { }
 
 func ==(lhs: NKTwitterUser, rhs: NKTwitterUser) -> Bool {
-    return lhs.name == rhs.name && lhs.location == rhs.location && lhs.profileImage == rhs.profileImage && lhs.followers == rhs.followers && lhs.verified == rhs.verified && lhs.screenName == rhs.screenName
+    return lhs.name == rhs.name && lhs.location == rhs.location && lhs.profileImage.absoluteString == rhs.profileImage.absoluteString && lhs.followers == rhs.followers && lhs.verified == rhs.verified && lhs.screenName == rhs.screenName
 }
 
 struct NKTwitterUser: Deserializable {

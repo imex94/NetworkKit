@@ -60,7 +60,7 @@ public typealias NKHTTPRequestFailureClosure = (NKHTTPRequestError) -> Void
 
 /// Create an HTTP Request
 public class NKHTTPRequest: NSObject {
-    
+
     /**
      A simple HTTP GET method to get request from a url.
      
@@ -71,7 +71,7 @@ public class NKHTTPRequest: NSObject {
      - failure: Failure Closure which notifies if any error has occured during the request.
      
      */
-    public class func GET(var urlString: String, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+    public class func GET(urlString: String, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
         
         #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
@@ -83,21 +83,22 @@ public class NKHTTPRequest: NSObject {
         #if os(iOS)
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         #endif
-            
+        
+        var urlS = urlString
         if let params = params {
-            urlString += "?"
+            urlS += "?"
             var counter = 0
             for (key, value) in params {
-                if counter == 0 { urlString += "\(key)=\(value)" }
+                if counter == 0 { urlS += "\(key)=\(value)" }
                 else {
-                    urlString += "&\(key)=\(value)"
+                    urlS += "&\(key)=\(value)"
                 }
-                counter++
+                counter += 1
             }
         }
         
-        guard let url = NSURL(string: urlString) else {
-            failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
+        guard let url = NSURL(string: urlS) else {
+            failure(.InvalidURL("ERROR: \(urlS) is an invalid URL for the HTTP Request."))
             return nil
         }
         

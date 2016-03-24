@@ -24,14 +24,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
-//! Project version number for NetworkKit.
 FOUNDATION_EXPORT double NetworkKitVersionNumber;
-
-//! Project version string for NetworkKit.
 FOUNDATION_EXPORT const unsigned char NetworkKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <NetworkKit/PublicHeader.h>
 
 

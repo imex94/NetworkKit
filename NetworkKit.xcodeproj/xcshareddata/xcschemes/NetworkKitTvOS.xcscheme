@@ -26,13 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2BB9D8951C9F1A4900A9F47B"
+               BlueprintIdentifier = "2BF2B6EF1CA44B7F0003939B"
                BuildableName = "NetworkKitTvOSTests.xctest"
                BlueprintName = "NetworkKitTvOSTests"
                ReferencedContainer = "container:NetworkKit.xcodeproj">

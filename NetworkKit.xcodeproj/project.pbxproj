@@ -7,40 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BB9D8301C9AEF5500A9F47B /* NetworkKitMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9D82F1C9AEF5500A9F47B /* NetworkKitMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB9D8371C9AEFD600A9F47B /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
 		2BB9D8381C9AEFD600A9F47B /* NKJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */; };
 		2BB9D8391C9AEFD600A9F47B /* NKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */; };
-		2BB9D84D1C9AF89000A9F47B /* NetworkKitWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9D84C1C9AF89000A9F47B /* NetworkKitWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB9D8521C9AF89900A9F47B /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
 		2BB9D8531C9AF89900A9F47B /* NKJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */; };
 		2BB9D8541C9AF89900A9F47B /* NKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */; };
-		2BB9D85D1C9AF95000A9F47B /* NetworkKitTvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9D85C1C9AF95000A9F47B /* NetworkKitTvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB9D8621C9AF95B00A9F47B /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
 		2BB9D8631C9AF95B00A9F47B /* NKJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */; };
 		2BB9D8641C9AF95B00A9F47B /* NKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */; };
-		2BB9D8891C9F1A2800A9F47B /* NetworkKitMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9D8881C9F1A2800A9F47B /* NetworkKitMacTests.swift */; };
-		2BB9D88B1C9F1A2800A9F47B /* NetworkKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */; };
-		2BB9D8991C9F1A4900A9F47B /* NetworkKitTvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9D8981C9F1A4900A9F47B /* NetworkKitTvOSTests.swift */; };
-		2BB9D89B1C9F1A4900A9F47B /* NetworkKitTvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */; };
 		2BB9D8A51C9F1A5A00A9F47B /* NKJSONHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C51C91C0E000FD0CA9 /* NKJSONHelperTests.swift */; };
 		2BB9D8A61C9F1A5A00A9F47B /* NKHTTPRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C61C91C0E000FD0CA9 /* NKHTTPRequestTests.swift */; };
 		2BB9D8A71C9F1A5A00A9F47B /* NKHNTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C71C91C0E000FD0CA9 /* NKHNTestItem.swift */; };
 		2BB9D8A81C9F1A5A00A9F47B /* NKTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C81C91C0E000FD0CA9 /* NKTweet.swift */; };
 		2BB9D8A91C9F1A5A00A9F47B /* hcNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CD1C91C1CB00FD0CA9 /* hcNews.json */; };
 		2BB9D8AA1C9F1A5A00A9F47B /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CE1C91C1CB00FD0CA9 /* twitter.json */; };
-		2BB9D8AB1C9F1A5B00A9F47B /* NKJSONHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C51C91C0E000FD0CA9 /* NKJSONHelperTests.swift */; };
-		2BB9D8AC1C9F1A5B00A9F47B /* NKHTTPRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C61C91C0E000FD0CA9 /* NKHTTPRequestTests.swift */; };
-		2BB9D8AD1C9F1A5B00A9F47B /* NKHNTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C71C91C0E000FD0CA9 /* NKHNTestItem.swift */; };
-		2BB9D8AE1C9F1A5B00A9F47B /* NKTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C81C91C0E000FD0CA9 /* NKTweet.swift */; };
-		2BB9D8AF1C9F1A5B00A9F47B /* hcNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CD1C91C1CB00FD0CA9 /* hcNews.json */; };
-		2BB9D8B01C9F1A5B00A9F47B /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CE1C91C1CB00FD0CA9 /* twitter.json */; };
 		2BB9D8B61C9F1A5D00A9F47B /* NKJSONHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C51C91C0E000FD0CA9 /* NKJSONHelperTests.swift */; };
 		2BB9D8B71C9F1A5D00A9F47B /* NKHTTPRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C61C91C0E000FD0CA9 /* NKHTTPRequestTests.swift */; };
 		2BB9D8B81C9F1A5D00A9F47B /* NKHNTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C71C91C0E000FD0CA9 /* NKHNTestItem.swift */; };
 		2BB9D8B91C9F1A5D00A9F47B /* NKTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C81C91C0E000FD0CA9 /* NKTweet.swift */; };
 		2BB9D8BA1C9F1A5D00A9F47B /* hcNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CD1C91C1CB00FD0CA9 /* hcNews.json */; };
 		2BB9D8BB1C9F1A5D00A9F47B /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CE1C91C1CB00FD0CA9 /* twitter.json */; };
+		2BB9D8C51CA0237E00A9F47B /* NKReachabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9D8C41CA0237E00A9F47B /* NKReachabilityTests.swift */; };
+		2BB9D8C61CA0237E00A9F47B /* NKReachabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9D8C41CA0237E00A9F47B /* NKReachabilityTests.swift */; };
+		2BB9D8C91CA0AFC400A9F47B /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB9D82D1C9AEF5400A9F47B /* NetworkKit.framework */; };
+		2BB9D8CF1CA0B08E00A9F47B /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BB9D8D01CA0B09800A9F47B /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BB9D8D11CA0B0A200A9F47B /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BD3D3CD1C92EE920080BC62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */; };
 		2BD3D3CF1C92EE920080BC62 /* NKEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */; };
 		2BD3D3D21C92EE920080BC62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3D3D01C92EE920080BC62 /* Main.storyboard */; };
@@ -48,6 +41,14 @@
 		2BD3D3D71C92EE920080BC62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD3D3D51C92EE920080BC62 /* LaunchScreen.storyboard */; };
 		2BD3D3DE1C92EEC90080BC62 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */; };
 		2BD3D3E31C92EFF80080BC62 /* NKEItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3D3E21C92EFF80080BC62 /* NKEItem.swift */; };
+		2BF2B6F51CA44B7F0003939B /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB9D85A1C9AF95000A9F47B /* NetworkKit.framework */; };
+		2BF2B6FB1CA44BC90003939B /* NKJSONHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C51C91C0E000FD0CA9 /* NKJSONHelperTests.swift */; };
+		2BF2B6FC1CA44BC90003939B /* NKHTTPRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C61C91C0E000FD0CA9 /* NKHTTPRequestTests.swift */; };
+		2BF2B6FD1CA44BC90003939B /* NKReachabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9D8C41CA0237E00A9F47B /* NKReachabilityTests.swift */; };
+		2BF2B6FE1CA44BC90003939B /* NKHNTestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C71C91C0E000FD0CA9 /* NKHNTestItem.swift */; };
+		2BF2B6FF1CA44BC90003939B /* NKTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4C81C91C0E000FD0CA9 /* NKTweet.swift */; };
+		2BF2B7001CA44BD70003939B /* hcNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CD1C91C1CB00FD0CA9 /* hcNews.json */; };
+		2BF2B7011CA44BD70003939B /* twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCC4CE1C91C1CB00FD0CA9 /* twitter.json */; };
 		2BFCC4A71C91B8D500FD0CA9 /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BFCC4B91C91C0B000FD0CA9 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */; };
 		2BFCC4C21C91C0C400FD0CA9 /* NKHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */; };
@@ -56,19 +57,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2BB9D88C1C9F1A2800A9F47B /* PBXContainerItemProxy */ = {
+		2BB9D8CA1CA0AFC900A9F47B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BFCC49A1C91B8D500FD0CA9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2BB9D82C1C9AEF5400A9F47B;
 			remoteInfo = NetworkKitMac;
-		};
-		2BB9D89C1C9F1A4900A9F47B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BFCC49A1C91B8D500FD0CA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2BB9D8591C9AF95000A9F47B;
-			remoteInfo = NetworkKitTvOS;
 		};
 		2BD3D3DC1C92EEC50080BC62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -76,6 +70,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2BFCC4A21C91B8D500FD0CA9;
 			remoteInfo = NetworkKit;
+		};
+		2BF2B6F61CA44B7F0003939B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BFCC49A1C91B8D500FD0CA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BB9D8591C9AF95000A9F47B;
+			remoteInfo = NetworkKitTvOS;
 		};
 		2BFCC4BA1C91C0B000FD0CA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,21 +88,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BB9D82F1C9AEF5500A9F47B /* NetworkKitMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKitMac.h; sourceTree = "<group>"; };
-		2BB9D8311C9AEF5500A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BB9D84A1C9AF89000A9F47B /* NetworkKitWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKitWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BB9D84C1C9AF89000A9F47B /* NetworkKitWatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKitWatchOS.h; sourceTree = "<group>"; };
-		2BB9D84E1C9AF89000A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKitTvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BB9D85C1C9AF95000A9F47B /* NetworkKitTvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKitTvOS.h; sourceTree = "<group>"; };
-		2BB9D85E1C9AF95000A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB9D82D1C9AEF5400A9F47B /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB9D84A1C9AF89000A9F47B /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB9D85A1C9AF95000A9F47B /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB9D8861C9F1A2800A9F47B /* NetworkKitMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BB9D8881C9F1A2800A9F47B /* NetworkKitMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitMacTests.swift; sourceTree = "<group>"; };
-		2BB9D88A1C9F1A2800A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BB9D8961C9F1A4900A9F47B /* NetworkKitTvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BB9D8981C9F1A4900A9F47B /* NetworkKitTvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTvOSTests.swift; sourceTree = "<group>"; };
-		2BB9D89A1C9F1A4900A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB9D8C41CA0237E00A9F47B /* NKReachabilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKReachabilityTests.swift; sourceTree = "<group>"; };
+		2BB9D8D41CA0B26700A9F47B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB9D8D81CA0B27E00A9F47B /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		2BB9D8DA1CA0B2B400A9F47B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB9D8DB1CA0B2C400A9F47B /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD3D3CC1C92EE920080BC62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD3D3CE1C92EE920080BC62 /* NKEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKEViewController.swift; sourceTree = "<group>"; };
@@ -110,11 +105,10 @@
 		2BD3D3D61C92EE920080BC62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BD3D3D81C92EE920080BC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD3D3E21C92EFF80080BC62 /* NKEItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKEItem.swift; sourceTree = "<group>"; };
+		2BF2B6F01CA44B7F0003939B /* NetworkKitTvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
-		2BFCC4A81C91B8D500FD0CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFCC4B41C91C0B000FD0CA9 /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BFCC4B81C91C0B000FD0CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKHTTPRequest.swift; sourceTree = "<group>"; };
 		2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKJSONHelper.swift; sourceTree = "<group>"; };
 		2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKReachability.swift; sourceTree = "<group>"; };
@@ -152,15 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB9D88B1C9F1A2800A9F47B /* NetworkKitMac.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2BB9D8931C9F1A4900A9F47B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2BB9D89B1C9F1A4900A9F47B /* NetworkKitTvOS.framework in Frameworks */,
+				2BB9D8C91CA0AFC400A9F47B /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +155,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD3D3DE1C92EEC90080BC62 /* NetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BF2B6ED1CA44B7F0003939B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF2B6F51CA44B7F0003939B /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,51 +184,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BB9D82E1C9AEF5500A9F47B /* NetworkKitMac */ = {
-			isa = PBXGroup;
-			children = (
-				2BB9D82F1C9AEF5500A9F47B /* NetworkKitMac.h */,
-				2BB9D8311C9AEF5500A9F47B /* Info.plist */,
-			);
-			path = NetworkKitMac;
-			sourceTree = "<group>";
-		};
-		2BB9D84B1C9AF89000A9F47B /* NetworkKitWatchOS */ = {
-			isa = PBXGroup;
-			children = (
-				2BB9D84C1C9AF89000A9F47B /* NetworkKitWatchOS.h */,
-				2BB9D84E1C9AF89000A9F47B /* Info.plist */,
-			);
-			path = NetworkKitWatchOS;
-			sourceTree = "<group>";
-		};
-		2BB9D85B1C9AF95000A9F47B /* NetworkKitTvOS */ = {
-			isa = PBXGroup;
-			children = (
-				2BB9D85C1C9AF95000A9F47B /* NetworkKitTvOS.h */,
-				2BB9D85E1C9AF95000A9F47B /* Info.plist */,
-			);
-			path = NetworkKitTvOS;
-			sourceTree = "<group>";
-		};
-		2BB9D8871C9F1A2800A9F47B /* NetworkKitMacTests */ = {
-			isa = PBXGroup;
-			children = (
-				2BB9D8881C9F1A2800A9F47B /* NetworkKitMacTests.swift */,
-				2BB9D88A1C9F1A2800A9F47B /* Info.plist */,
-			);
-			path = NetworkKitMacTests;
-			sourceTree = "<group>";
-		};
-		2BB9D8971C9F1A4900A9F47B /* NetworkKitTvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				2BB9D8981C9F1A4900A9F47B /* NetworkKitTvOSTests.swift */,
-				2BB9D89A1C9F1A4900A9F47B /* Info.plist */,
-			);
-			path = NetworkKitTvOSTests;
-			sourceTree = "<group>";
-		};
 		2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,11 +228,6 @@
 				2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */,
 				2BFCC4A51C91B8D500FD0CA9 /* NetworkKit */,
 				2BFCC4B51C91C0B000FD0CA9 /* NetworkKitTests */,
-				2BB9D82E1C9AEF5500A9F47B /* NetworkKitMac */,
-				2BB9D84B1C9AF89000A9F47B /* NetworkKitWatchOS */,
-				2BB9D85B1C9AF95000A9F47B /* NetworkKitTvOS */,
-				2BB9D8871C9F1A2800A9F47B /* NetworkKitMacTests */,
-				2BB9D8971C9F1A4900A9F47B /* NetworkKitTvOSTests */,
 				2BFCC4A41C91B8D500FD0CA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -294,11 +238,11 @@
 				2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */,
 				2BFCC4B41C91C0B000FD0CA9 /* NetworkKitTests.xctest */,
 				2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */,
-				2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */,
-				2BB9D84A1C9AF89000A9F47B /* NetworkKitWatchOS.framework */,
-				2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */,
+				2BB9D82D1C9AEF5400A9F47B /* NetworkKit.framework */,
+				2BB9D84A1C9AF89000A9F47B /* NetworkKit.framework */,
+				2BB9D85A1C9AF95000A9F47B /* NetworkKit.framework */,
 				2BB9D8861C9F1A2800A9F47B /* NetworkKitMacTests.xctest */,
-				2BB9D8961C9F1A4900A9F47B /* NetworkKitTvOSTests.xctest */,
+				2BF2B6F01CA44B7F0003939B /* NetworkKitTvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,7 +254,8 @@
 				2BFCC4BF1C91C0C400FD0CA9 /* NKHTTPRequest.swift */,
 				2BFCC4C01C91C0C400FD0CA9 /* NKJSONHelper.swift */,
 				2BFCC4C11C91C0C400FD0CA9 /* NKReachability.swift */,
-				2BFCC4A81C91B8D500FD0CA9 /* Info.plist */,
+				2BB9D8DA1CA0B2B400A9F47B /* Info.plist */,
+				2BB9D8DB1CA0B2C400A9F47B /* Info-tvOS.plist */,
 			);
 			path = NetworkKit;
 			sourceTree = "<group>";
@@ -320,11 +265,13 @@
 			children = (
 				2BFCC4C51C91C0E000FD0CA9 /* NKJSONHelperTests.swift */,
 				2BFCC4C61C91C0E000FD0CA9 /* NKHTTPRequestTests.swift */,
+				2BB9D8C41CA0237E00A9F47B /* NKReachabilityTests.swift */,
 				2BFCC4C71C91C0E000FD0CA9 /* NKHNTestItem.swift */,
 				2BFCC4C81C91C0E000FD0CA9 /* NKTweet.swift */,
 				2BFCC4CD1C91C1CB00FD0CA9 /* hcNews.json */,
 				2BFCC4CE1C91C1CB00FD0CA9 /* twitter.json */,
-				2BFCC4B81C91C0B000FD0CA9 /* Info.plist */,
+				2BB9D8D41CA0B26700A9F47B /* Info.plist */,
+				2BB9D8D81CA0B27E00A9F47B /* Info-tvOS.plist */,
 			);
 			path = NetworkKitTests;
 			sourceTree = "<group>";
@@ -336,7 +283,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB9D8301C9AEF5500A9F47B /* NetworkKitMac.h in Headers */,
+				2BB9D8CF1CA0B08E00A9F47B /* NetworkKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +291,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB9D84D1C9AF89000A9F47B /* NetworkKitWatchOS.h in Headers */,
+				2BB9D8D01CA0B09800A9F47B /* NetworkKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +299,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB9D85D1C9AF95000A9F47B /* NetworkKitTvOS.h in Headers */,
+				2BB9D8D11CA0B0A200A9F47B /* NetworkKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +330,7 @@
 			);
 			name = NetworkKitMac;
 			productName = NetworkKitMac;
-			productReference = 2BB9D82D1C9AEF5400A9F47B /* NetworkKitMac.framework */;
+			productReference = 2BB9D82D1C9AEF5400A9F47B /* NetworkKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2BB9D8491C9AF89000A9F47B /* NetworkKitWatchOS */ = {
@@ -401,7 +348,7 @@
 			);
 			name = NetworkKitWatchOS;
 			productName = NetworkKitWatchOS;
-			productReference = 2BB9D84A1C9AF89000A9F47B /* NetworkKitWatchOS.framework */;
+			productReference = 2BB9D84A1C9AF89000A9F47B /* NetworkKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2BB9D8591C9AF95000A9F47B /* NetworkKitTvOS */ = {
@@ -420,7 +367,7 @@
 			);
 			name = NetworkKitTvOS;
 			productName = NetworkKitTvOS;
-			productReference = 2BB9D85A1C9AF95000A9F47B /* NetworkKitTvOS.framework */;
+			productReference = 2BB9D85A1C9AF95000A9F47B /* NetworkKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2BB9D8851C9F1A2800A9F47B /* NetworkKitMacTests */ = {
@@ -434,29 +381,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				2BB9D88D1C9F1A2800A9F47B /* PBXTargetDependency */,
+				2BB9D8CB1CA0AFC900A9F47B /* PBXTargetDependency */,
 			);
 			name = NetworkKitMacTests;
 			productName = NetworkKitMacTests;
 			productReference = 2BB9D8861C9F1A2800A9F47B /* NetworkKitMacTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2BB9D8951C9F1A4900A9F47B /* NetworkKitTvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2BB9D89E1C9F1A4900A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitTvOSTests" */;
-			buildPhases = (
-				2BB9D8921C9F1A4900A9F47B /* Sources */,
-				2BB9D8931C9F1A4900A9F47B /* Frameworks */,
-				2BB9D8941C9F1A4900A9F47B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2BB9D89D1C9F1A4900A9F47B /* PBXTargetDependency */,
-			);
-			name = NetworkKitTvOSTests;
-			productName = NetworkKitTvOSTests;
-			productReference = 2BB9D8961C9F1A4900A9F47B /* NetworkKitTvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2BD3D3C91C92EE920080BC62 /* NetworkKitExample */ = {
@@ -476,6 +405,24 @@
 			productName = NetworkKitExample;
 			productReference = 2BD3D3CA1C92EE920080BC62 /* NetworkKitExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2BF2B6EF1CA44B7F0003939B /* NetworkKitTvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BF2B6F81CA44B7F0003939B /* Build configuration list for PBXNativeTarget "NetworkKitTvOSTests" */;
+			buildPhases = (
+				2BF2B6EC1CA44B7F0003939B /* Sources */,
+				2BF2B6ED1CA44B7F0003939B /* Frameworks */,
+				2BF2B6EE1CA44B7F0003939B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BF2B6F71CA44B7F0003939B /* PBXTargetDependency */,
+			);
+			name = NetworkKitTvOSTests;
+			productName = NetworkKitTvOSTests;
+			productReference = 2BF2B6F01CA44B7F0003939B /* NetworkKitTvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */ = {
 			isa = PBXNativeTarget;
@@ -520,7 +467,7 @@
 		2BFCC49A1C91B8D500FD0CA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = alextelek;
 				TargetAttributes = {
@@ -536,11 +483,11 @@
 					2BB9D8851C9F1A2800A9F47B = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					2BB9D8951C9F1A4900A9F47B = {
-						CreatedOnToolsVersion = 7.2.1;
-					};
 					2BD3D3C91C92EE920080BC62 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					2BF2B6EF1CA44B7F0003939B = {
+						CreatedOnToolsVersion = 7.3;
 					};
 					2BFCC4A21C91B8D500FD0CA9 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -568,9 +515,9 @@
 				2BFCC4B31C91C0B000FD0CA9 /* NetworkKitTests */,
 				2BB9D82C1C9AEF5400A9F47B /* NetworkKitMac */,
 				2BB9D8851C9F1A2800A9F47B /* NetworkKitMacTests */,
-				2BB9D8491C9AF89000A9F47B /* NetworkKitWatchOS */,
 				2BB9D8591C9AF95000A9F47B /* NetworkKitTvOS */,
-				2BB9D8951C9F1A4900A9F47B /* NetworkKitTvOSTests */,
+				2BF2B6EF1CA44B7F0003939B /* NetworkKitTvOSTests */,
+				2BB9D8491C9AF89000A9F47B /* NetworkKitWatchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -606,15 +553,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2BB9D8941C9F1A4900A9F47B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2BB9D8AF1C9F1A5B00A9F47B /* hcNews.json in Resources */,
-				2BB9D8B01C9F1A5B00A9F47B /* twitter.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2BD3D3C81C92EE920080BC62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -622,6 +560,15 @@
 				2BD3D3D71C92EE920080BC62 /* LaunchScreen.storyboard in Resources */,
 				2BD3D3D41C92EE920080BC62 /* Assets.xcassets in Resources */,
 				2BD3D3D21C92EE920080BC62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BF2B6EE1CA44B7F0003939B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF2B7001CA44BD70003939B /* hcNews.json in Resources */,
+				2BF2B7011CA44BD70003939B /* twitter.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,21 +673,9 @@
 			files = (
 				2BB9D8A51C9F1A5A00A9F47B /* NKJSONHelperTests.swift in Sources */,
 				2BB9D8A61C9F1A5A00A9F47B /* NKHTTPRequestTests.swift in Sources */,
-				2BB9D8891C9F1A2800A9F47B /* NetworkKitMacTests.swift in Sources */,
+				2BB9D8C61CA0237E00A9F47B /* NKReachabilityTests.swift in Sources */,
 				2BB9D8A81C9F1A5A00A9F47B /* NKTweet.swift in Sources */,
 				2BB9D8A71C9F1A5A00A9F47B /* NKHNTestItem.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2BB9D8921C9F1A4900A9F47B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2BB9D8AB1C9F1A5B00A9F47B /* NKJSONHelperTests.swift in Sources */,
-				2BB9D8AC1C9F1A5B00A9F47B /* NKHTTPRequestTests.swift in Sources */,
-				2BB9D8991C9F1A4900A9F47B /* NetworkKitTvOSTests.swift in Sources */,
-				2BB9D8AE1C9F1A5B00A9F47B /* NKTweet.swift in Sources */,
-				2BB9D8AD1C9F1A5B00A9F47B /* NKHNTestItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +686,18 @@
 				2BD3D3CF1C92EE920080BC62 /* NKEViewController.swift in Sources */,
 				2BD3D3CD1C92EE920080BC62 /* AppDelegate.swift in Sources */,
 				2BD3D3E31C92EFF80080BC62 /* NKEItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BF2B6EC1CA44B7F0003939B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF2B6FB1CA44BC90003939B /* NKJSONHelperTests.swift in Sources */,
+				2BF2B6FC1CA44BC90003939B /* NKHTTPRequestTests.swift in Sources */,
+				2BF2B6FD1CA44BC90003939B /* NKReachabilityTests.swift in Sources */,
+				2BF2B6FE1CA44BC90003939B /* NKHNTestItem.swift in Sources */,
+				2BF2B6FF1CA44BC90003939B /* NKTweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +717,7 @@
 			files = (
 				2BB9D8B71C9F1A5D00A9F47B /* NKHTTPRequestTests.swift in Sources */,
 				2BB9D8B81C9F1A5D00A9F47B /* NKHNTestItem.swift in Sources */,
+				2BB9D8C51CA0237E00A9F47B /* NKReachabilityTests.swift in Sources */,
 				2BB9D8B91C9F1A5D00A9F47B /* NKTweet.swift in Sources */,
 				2BB9D8B61C9F1A5D00A9F47B /* NKJSONHelperTests.swift in Sources */,
 			);
@@ -778,20 +726,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2BB9D88D1C9F1A2800A9F47B /* PBXTargetDependency */ = {
+		2BB9D8CB1CA0AFC900A9F47B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BB9D82C1C9AEF5400A9F47B /* NetworkKitMac */;
-			targetProxy = 2BB9D88C1C9F1A2800A9F47B /* PBXContainerItemProxy */;
-		};
-		2BB9D89D1C9F1A4900A9F47B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2BB9D8591C9AF95000A9F47B /* NetworkKitTvOS */;
-			targetProxy = 2BB9D89C1C9F1A4900A9F47B /* PBXContainerItemProxy */;
+			targetProxy = 2BB9D8CA1CA0AFC900A9F47B /* PBXContainerItemProxy */;
 		};
 		2BD3D3DD1C92EEC50080BC62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BFCC4A21C91B8D500FD0CA9 /* NetworkKit */;
 			targetProxy = 2BD3D3DC1C92EEC50080BC62 /* PBXContainerItemProxy */;
+		};
+		2BF2B6F71CA44B7F0003939B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BB9D8591C9AF95000A9F47B /* NetworkKitTvOS */;
+			targetProxy = 2BF2B6F61CA44B7F0003939B /* PBXContainerItemProxy */;
 		};
 		2BFCC4BB1C91C0B000FD0CA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -823,44 +771,54 @@
 		2BB9D8331C9AEF5500A9F47B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = NetworkKitMac/Info.plist;
+				INFOPLIST_FILE = NetworkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitMac;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		2BB9D8341C9AEF5500A9F47B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = NetworkKitMac/Info.plist;
+				INFOPLIST_FILE = NetworkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitMac;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -873,15 +831,18 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitWatchOS/Info.plist;
+				INFOPLIST_FILE = NetworkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitWatchOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -894,55 +855,66 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitWatchOS/Info.plist;
+				INFOPLIST_FILE = NetworkKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitWatchOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 		2BB9D8601C9AF95000A9F47B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitTvOS/Info.plist;
+				INFOPLIST_FILE = "NetworkKit/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		2BB9D8611C9AF95000A9F47B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitTvOS/Info.plist;
+				INFOPLIST_FILE = "NetworkKit/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -951,13 +923,17 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitMacTests/Info.plist;
+				INFOPLIST_FILE = NetworkKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitMacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -966,39 +942,17 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitMacTests/Info.plist;
+				INFOPLIST_FILE = NetworkKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitMacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		2BB9D89F1C9F1A4900A9F47B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitTvOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		2BB9D8A01C9F1A4900A9F47B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = NetworkKitTvOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1031,6 +985,39 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2BF2B6F91CA44B7F0003939B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = NetworkKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2BF2B6FA1CA44B7F0003939B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = NetworkKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTvOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1126,6 +1113,7 @@
 		2BFCC4AC1C91B8D500FD0CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1136,16 +1124,20 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		2BFCC4AD1C91B8D500FD0CA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1156,31 +1148,44 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 		2BFCC4BD1C91C0B000FD0CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = NetworkKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		2BFCC4BE1C91C0B000FD0CA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = NetworkKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alextelek.NetworkKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1194,6 +1199,7 @@
 				2BB9D8341C9AEF5500A9F47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB9D84F1C9AF89000A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitWatchOS" */ = {
 			isa = XCConfigurationList;
@@ -1202,6 +1208,7 @@
 				2BB9D8511C9AF89000A9F47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB9D85F1C9AF95000A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitTvOS" */ = {
 			isa = XCConfigurationList;
@@ -1210,6 +1217,7 @@
 				2BB9D8611C9AF95000A9F47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB9D88E1C9F1A2800A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitMacTests" */ = {
 			isa = XCConfigurationList;
@@ -1218,14 +1226,7 @@
 				2BB9D8901C9F1A2800A9F47B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		2BB9D89E1C9F1A4900A9F47B /* Build configuration list for PBXNativeTarget "NetworkKitTvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2BB9D89F1C9F1A4900A9F47B /* Debug */,
-				2BB9D8A01C9F1A4900A9F47B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BD3D3D91C92EE920080BC62 /* Build configuration list for PBXNativeTarget "NetworkKitExample" */ = {
 			isa = XCConfigurationList;
@@ -1235,6 +1236,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2BF2B6F81CA44B7F0003939B /* Build configuration list for PBXNativeTarget "NetworkKitTvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BF2B6F91CA44B7F0003939B /* Debug */,
+				2BF2B6FA1CA44B7F0003939B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		2BFCC49D1C91B8D500FD0CA9 /* Build configuration list for PBXProject "NetworkKit" */ = {
 			isa = XCConfigurationList;

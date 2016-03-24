@@ -64,7 +64,7 @@ class NKJSONHelperTests: XCTestCase {
         var actual: NKHNTestItem?
         actual <-- json
         
-        XCTAssertTrue(actual! == expectationItem)
+        XCTAssertEqual(actual!, expectationItem)
     }
     
     func testJSONParsingIntoSwiftObjectUsingBigJSON() {
@@ -72,10 +72,8 @@ class NKJSONHelperTests: XCTestCase {
         let data = NSData(contentsOfFile: filePath!)
         let json = try? NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
         
-        var actual = [NKTweet]()
-        actual <-- json!["statuses"]
-        
-        let tweet = actual[0]
+        var actual: NKTweet?
+        actual <-- json!["statuses"]!![0]
         
         let expectedUser = NKTwitterUser(data: [
             "name": "Sean Cummings",
@@ -85,9 +83,9 @@ class NKJSONHelperTests: XCTestCase {
             "verified": false,
             "screen_name": "sean_cummings"
             ])
-        
-        XCTAssertEqual(tweet.retweetCount, 0)
-        XCTAssertEqual(tweet.text, "Aggressive Ponytail #freebandnames")
-        XCTAssertEqual(tweet.user!, expectedUser)
+
+        XCTAssertEqual(actual!.retweetCount, 0)
+        XCTAssertEqual(actual!.text, "Aggressive Ponytail #freebandnames")
+        XCTAssertEqual(actual!.user!, expectedUser)
     }
 }

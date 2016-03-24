@@ -116,17 +116,6 @@ class NKHTTPRequestTests: XCTestCase {
         }
     }
     
-    func testInternetAvailability() {
-        if NKReachability.isNetworkAvailable() {
-            
-            XCTAssertTrue(NKReachability.isNetworkAvailable())
-            
-        } else {
-            
-            XCTAssertTrue(!NKReachability.isNetworkAvailable())
-        }
-    }
-    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
