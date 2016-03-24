@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2BB9D8591C9AF95000A9F47B"
-               BuildableName = "NetworkKitTvOS.framework"
+               BuildableName = "NetworkKit.framework"
                BlueprintName = "NetworkKitTvOS"
                ReferencedContainer = "container:NetworkKit.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BB9D8591C9AF95000A9F47B"
-            BuildableName = "NetworkKitTvOS.framework"
+            BuildableName = "NetworkKit.framework"
             BlueprintName = "NetworkKitTvOS"
             ReferencedContainer = "container:NetworkKit.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BB9D8591C9AF95000A9F47B"
-            BuildableName = "NetworkKitTvOS.framework"
+            BuildableName = "NetworkKit.framework"
             BlueprintName = "NetworkKitTvOS"
             ReferencedContainer = "container:NetworkKit.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BB9D8591C9AF95000A9F47B"
-            BuildableName = "NetworkKitTvOS.framework"
+            BuildableName = "NetworkKit.framework"
             BlueprintName = "NetworkKitTvOS"
             ReferencedContainer = "container:NetworkKit.xcodeproj">
          </BuildableReference>
