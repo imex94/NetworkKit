@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/imex94/NetworkKit"
   s.license          = 'MIT'
   s.author           = { "Alex Telek" => "imex94@gmail.com" }
-  s.source           = { :git => "https://github.com/imex94/NetworkKit.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/imex94/NetworkKit.git", :tag => "v" + s.version.to_s }
   s.social_media_url = 'https://twitter.com/alexmtk'
 
   s.ios.deployment_target = '8.0'
