@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "NetworkKit"
-  s.version          = "1.3.1"
+  s.version          = "1.3.2"
   s.summary          = "Lightweight Networking and Parsing framework made for iOS, Mac, WatchOS and tvOS"
 
   s.description      = "A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced JSONHelper with functional parsing. For networking the library supports basic GET, POST, DELETE HTTP requests."

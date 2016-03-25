@@ -106,6 +106,7 @@
 		2BD3D3D81C92EE920080BC62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD3D3E21C92EFF80080BC62 /* NKEItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKEItem.swift; sourceTree = "<group>"; };
 		2BF2B6F01CA44B7F0003939B /* NetworkKitTvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BF2B7401CA4B2C80003939B /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		2BFCC4A31C91B8D500FD0CA9 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCC4A61C91B8D500FD0CA9 /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
 		2BFCC4B41C91C0B000FD0CA9 /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +226,7 @@
 		2BFCC4991C91B8D500FD0CA9 = {
 			isa = PBXGroup;
 			children = (
+				2BF2B7401CA4B2C80003939B /* Package.swift */,
 				2BD3D3CB1C92EE920080BC62 /* NetworkKitExample */,
 				2BFCC4A51C91B8D500FD0CA9 /* NetworkKit */,
 				2BFCC4B51C91C0B000FD0CA9 /* NetworkKitTests */,
@@ -1244,6 +1246,7 @@
 				2BF2B6FA1CA44B7F0003939B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BFCC49D1C91B8D500FD0CA9 /* Build configuration list for PBXProject "NetworkKit" */ = {
 			isa = XCConfigurationList;

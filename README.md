@@ -32,6 +32,27 @@ Then run the folloring command:
 $ pod install
 ```
 
+### Chartage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh) using the following command:
+
+```
+$ brew update
+$ brew install carthage
+```
+
+To integrate NetworkKit into your Xcode project using Carthage, add it into your ```Cartfile```:
+
+```
+github "imex94/NetworkKit" ~> 1.3
+```
+
+Run ```carthage update``` to build the framework and drag the built ```NetworkKit.framework``` into your Xcode project under **Target** - **General** - **Embedded binaries**:
+
+![Import Framework](https://github.com/imex94/NetworkKit/blob/master/images/import2.png "Import Framework")
+
 ## Usage
 
 **NetworkKitExample** project provides a guidance to get started.
