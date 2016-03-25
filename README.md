@@ -129,9 +129,9 @@ A simple HTTP GET method to get request from a url.
 **urlString** - `String` <br />
 The string representing the url. <br />
 
-**auth (Optional)** - `NKOauth?` <br />
+<!-- **auth (Optional)** - `NKOauth?` <br />
 Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
-NKOauth(consumerKey: "", consumerSecret: ""). <br />
+NKOauth(consumerKey: "", consumerSecret: ""). <br /> -->
 
 **params (Optional)** - `[NSObject: AnyObject]?` <br />
 The parameters you need to pass with the GET method. Everything after '?'. <br />
@@ -148,9 +148,9 @@ A simple HTTP POST method to post a resource to the url.
 **urlString** - `String` <br />
 The string representing the url.
 
-**auth (Optional)** - `NKOauth?` <br />
+<!-- **auth (Optional)** - `NKOauth?` <br />
 Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
-NKOauth(consumerKey: "", consumerSecret: ""). <br />
+NKOauth(consumerKey: "", consumerSecret: ""). <br /> -->
 
 **params (Optional)** - `[NSObject: AnyObject]?` <br />
 The body you need to pass with the POST method. Resources you want to pass. <br />
@@ -167,9 +167,9 @@ A simple HTTP DELETE method to delete a resource from the server.
 **urlString** - `String` <br />
 The string representing the url. <br />
 
-**auth (Optional)** - `NKOauth?` <br />
+<!-- **auth (Optional)** - `NKOauth?` <br />
 Add Oauth 2.0 when the API requires one. Just specify the consumerKey and consumer Secret, like this
-NKOauth(consumerKey: "", consumerSecret: ""). <br />
+NKOauth(consumerKey: "", consumerSecret: ""). <br /> -->
 
 **params (Optional)** - `[NSObject: AnyObject]?` <br />
 The body you need to pass with the DELETE method. Resources you want to delete. <br />
