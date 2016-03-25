@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/imex94/NetworkKit.svg?branch=master)](https://travis-ci.org/imex94/NetworkKit)
 [![Available devices](https://camo.githubusercontent.com/30f3ea607a65990e8cf2d6e11a48602167399324/68747470733a2f2f636f636f61706f642d6261646765732e6865726f6b756170702e636f6d2f702f41464e6574776f726b696e672f62616467652e706e67)]()
 [![Version](https://img.shields.io/cocoapods/v/NetworkKit.svg?style=flat)](http://cocoapods.org/pods/NetworkKit)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A lightweight iOS, Mac and Watch OS framework that makes networking and parsing super simple. Uses the open-sourced [JSONHelper](https://github.com/isair/JSONHelper) with functional parsing. For networking the library supports basic **GET**, **POST**, **DELETE** HTTP requests.
 
