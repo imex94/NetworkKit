@@ -33,7 +33,7 @@ Then run the folloring command:
 $ pod install
 ```
 
-### Chartage
+### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
