@@ -1,3 +1,7 @@
+<p align= "center">
+  <img src="https://github.com/imex94/NetworkKit/blob/master/images/networkKit.png" />
+</p>
+
 # NetworkKit ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 
 [![Build Status](https://travis-ci.org/imex94/NetworkKit.svg?branch=master)](https://travis-ci.org/imex94/NetworkKit)
