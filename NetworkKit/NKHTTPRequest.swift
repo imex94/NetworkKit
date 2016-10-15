@@ -31,35 +31,35 @@ import Foundation
 /// Two main types exist:
 ///     WARNING: Not serious error, just a warning that somethong went wrong
 ///     ERROR: Serious error, might cause the app to crash
-public enum NKHTTPRequestError: ErrorType {
-    case InvalidURL(String)
-    case DataTaskError(String)
-    case NoDataReturned(String)
-    case SerializationException(String)
-    case NoInternetConnection(String)
+public enum NKHTTPRequestError: Error {
+    case invalidURL(String)
+    case dataTaskError(String)
+    case noDataReturned(String)
+    case serializationException(String)
+    case noInternetConnection(String)
 }
 
 /// An extension for the custom error type to return the error message
 extension NKHTTPRequestError {
     public var message: String {
         switch self {
-            case .InvalidURL(let x): return x
-            case .DataTaskError(let x): return x
-            case .NoDataReturned(let x): return x
-            case .SerializationException(let x): return x
-            case .NoInternetConnection(let x): return x
+            case .invalidURL(let x): return x
+            case .dataTaskError(let x): return x
+            case .noDataReturned(let x): return x
+            case .serializationException(let x): return x
+            case .noInternetConnection(let x): return x
         }
     }
 }
 
 /// Successful HTTP Request Closure
-public typealias NKHTTPRequestSuccessClosure = (AnyObject) -> Void
+public typealias NKHTTPRequestSuccessClosure = (Any) -> Void
 
 /// Failure HTTP Request Closure
 public typealias NKHTTPRequestFailureClosure = (NKHTTPRequestError) -> Void
 
 /// Create an HTTP Request
-public class NKHTTPRequest: NSObject {
+open class NKHTTPRequest: NSObject {
 
     /**
      A simple HTTP GET method to get request from a url.
@@ -71,11 +71,11 @@ public class NKHTTPRequest: NSObject {
      - failure: Failure Closure which notifies if any error has occured during the request.
      
      */
-    public class func GET(urlString: String, params: [String: String]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+    open class func GET(_ urlString: String, params: [String: String]?, success: @escaping NKHTTPRequestSuccessClosure, failure: @escaping NKHTTPRequestFailureClosure) -> URLSessionDataTask? {
         
         #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
-            failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
+            failure(.noInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
         #endif
@@ -93,13 +93,13 @@ public class NKHTTPRequest: NSObject {
             }
         }
         
-        guard let url = NSURL(string: urlS) else {
-            failure(.InvalidURL("ERROR: \(urlS) is an invalid URL for the HTTP Request."))
+        guard let url = URL(string: urlS) else {
+            failure(.invalidURL("ERROR: \(urlS) is an invalid URL for the HTTP Request."))
             return nil
         }
         
-        let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "GET"
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         return dataTaskWithRequest(request, success: success, failure: failure)
@@ -114,24 +114,24 @@ public class NKHTTPRequest: NSObject {
      - success: Successful closure in case the request was successful.
      - failure: Failure Closure which notifies if any error has occured during the request.
      */
-    public class func POST(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+    open class func POST(_ urlString: String, params: [AnyHashable: Any]?, success: @escaping NKHTTPRequestSuccessClosure, failure: @escaping NKHTTPRequestFailureClosure) -> URLSessionDataTask? {
      
         #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
-            failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
+            failure(.noInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
         #endif
         
-        guard let url = NSURL(string: urlString) else {
+        guard let url = URL(string: urlString) else {
             
-            failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
+            failure(.invalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
             return nil
         }
         
-        let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST"
-        if params != nil { request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(params!, options: NSJSONWritingOptions.PrettyPrinted) }
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "POST"
+        if params != nil { request.httpBody = try? JSONSerialization.data(withJSONObject: params!, options: JSONSerialization.WritingOptions.prettyPrinted) }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         return dataTaskWithRequest(request, success: success, failure: failure)
@@ -146,58 +146,59 @@ public class NKHTTPRequest: NSObject {
      - success: Successful closure in case the request was successful.
      - failure: Failure Closure which notifies if any error has occured during the request.
      */
-    public class func DELETE(urlString: String, params: [NSObject: AnyObject]?, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask? {
+    open class func DELETE(_ urlString: String, params: [AnyHashable: Any]?, success: @escaping NKHTTPRequestSuccessClosure, failure: @escaping NKHTTPRequestFailureClosure) -> URLSessionDataTask? {
         
         #if !os(watchOS)
         guard NKReachability.isNetworkAvailable() else {
-            failure(.NoInternetConnection("The Internet connection appears to be offline. Try to connect again."))
+            failure(.noInternetConnection("The Internet connection appears to be offline. Try to connect again."))
             return nil
         }
         #endif
         
-        guard let url = NSURL(string: urlString) else {
+        guard let url = URL(string: urlString) else {
             
-            failure(.InvalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
+            failure(.invalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
             return nil
         }
         
-        let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "DELETE"
-        if params != nil { request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(params!, options: NSJSONWritingOptions.PrettyPrinted) }
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "DELETE"
+        if params != nil { request.httpBody = try? JSONSerialization.data(withJSONObject: params!, options: JSONSerialization.WritingOptions.prettyPrinted) }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         return dataTaskWithRequest(request, success: success, failure: failure)
     }
     
-    private class func dataTaskWithRequest(request: NSMutableURLRequest, success: NKHTTPRequestSuccessClosure, failure: NKHTTPRequestFailureClosure) -> NSURLSessionDataTask {
+    fileprivate class func dataTaskWithRequest(_ request: NSMutableURLRequest, success: @escaping NKHTTPRequestSuccessClosure, failure: @escaping NKHTTPRequestFailureClosure) -> URLSessionDataTask {
         
-        let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) { (d, r, e) -> Void in
+        
+        let dataTask = URLSession.shared.dataTask(with: request as URLRequest) { (d, r, e) in
             
             guard (e == nil) else {
                 
-                failure(.InvalidURL("WARNING: \(e!.description)"))
+                failure(.invalidURL("WARNING: \(e!.localizedDescription)"))
                 return
             }
             
             guard let data = d else {
                 
-                failure(.InvalidURL("WARNING: There was no data returned for this request."))
+                failure(.invalidURL("WARNING: There was no data returned for this request."))
                 return
             }
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async(execute: { () -> Void in
                 
-                var responseDict: AnyObject?
+                var responseDict: Any?
                 do {
-                    responseDict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                    responseDict = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
                 } catch {
                     
-                    failure(.SerializationException("ERROR: There was an error parsing the data from the response."))
+                    failure(.serializationException("ERROR: There was an error parsing the data from the response."))
                 }
                 
                 guard let json = responseDict else {
                     
-                    failure(.SerializationException("WARNING: There was no data parsed from the response. It's empty. "))
+                    failure(.serializationException("WARNING: There was no data parsed from the response. It's empty. "))
                     return
                 }
                 

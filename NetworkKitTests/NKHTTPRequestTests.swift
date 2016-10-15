@@ -53,7 +53,7 @@ class NKHTTPRequestTests: XCTestCase {
     }
     
     func testGETRequest() {
-        let expectation = expectationWithDescription("Test GET HTTP Request")
+        let expectation = self.expectation(description: "Test GET HTTP Request")
         
         var item: NKHNTestItem?
         var errorMessage: String?
@@ -61,12 +61,12 @@ class NKHTTPRequestTests: XCTestCase {
         if !NKReachability.isNetworkAvailable() {
             XCTAssertTrue(true)
         } else {
-            NKHTTPRequest.GET(
+            _ = NKHTTPRequest.GET(
                 "https://hacker-news.firebaseio.com/v0/item/11245652.json",
                 params: ["print": "pretty"],
                 success: { data in
                     
-                    item <-- data
+                    let _ = item <-- data
                     
                     expectation.fulfill()
                 },
@@ -76,7 +76,7 @@ class NKHTTPRequestTests: XCTestCase {
                     expectation.fulfill()
             })
             
-            waitForExpectationsWithTimeout(10.0, handler: nil)
+            waitForExpectations(timeout: 10.0, handler: nil)
             
             XCTAssertEqual(item, self.expectationItem)
             XCTAssertNil(errorMessage)
@@ -84,7 +84,7 @@ class NKHTTPRequestTests: XCTestCase {
     }
     
     func testHTTPRequestCancelledShouldResultWarning() {
-        let expectation = expectationWithDescription("Test GET HTTP Request")
+        let expectation = self.expectation(description: "Test GET HTTP Request")
         
         var item: NKHNTestItem?
         var errorMessage: String?
@@ -97,7 +97,7 @@ class NKHTTPRequestTests: XCTestCase {
                 params: ["print": "pretty"],
                 success: { data in
                     
-                    item <-- data
+                    let _ = item <-- data
                     
                     expectation.fulfill()
                 },
@@ -109,7 +109,7 @@ class NKHTTPRequestTests: XCTestCase {
             })
             task?.cancel()
             
-            waitForExpectationsWithTimeout(10.0, handler: nil)
+            waitForExpectations(timeout: 10.0, handler: nil)
             
             XCTAssertNil(item)
             XCTAssertNotNil(errorMessage)
@@ -118,9 +118,9 @@ class NKHTTPRequestTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             
-            NKHTTPRequest.GET(
+            _ = NKHTTPRequest.GET(
                 "https://hacker-news.firebaseio.com/v0/item/11245652.json",
                 params: ["print": "pretty"],
                 success: { data in
