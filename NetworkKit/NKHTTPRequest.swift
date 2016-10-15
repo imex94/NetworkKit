@@ -138,10 +138,46 @@ open class NKHTTPRequest: NSObject {
     }
     
     /**
+     A simple HTTP POST method to post a resource to the url.
+     
+     - Parameters:
+     - urlString: The string representing the url.
+     - params: The body you need to pass with the POST method. Resources you want to pass.
+     - success: Successful closure in case the request was successful.
+     - failure: Failure Closure which notifies if any error has occured during the request.
+     */
+    open class func POST(_ urlString: String, headers: [String: String], params: [AnyHashable: Any]?, success: @escaping NKHTTPRequestSuccessClosure, failure: @escaping NKHTTPRequestFailureClosure) -> URLSessionDataTask? {
+        
+        #if !os(watchOS)
+            guard NKReachability.isNetworkAvailable() else {
+                failure(.noInternetConnection("The Internet connection appears to be offline. Try to connect again."))
+                return nil
+            }
+        #endif
+        
+        guard let url = URL(string: urlString) else {
+            
+            failure(.invalidURL("ERROR: \(urlString) is an invalid URL for the HTTP Request."))
+            return nil
+        }
+        
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "POST"
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+        if params != nil { request.httpBody = try? JSONSerialization.data(withJSONObject: params!, options: JSONSerialization.WritingOptions.prettyPrinted) }
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        return dataTaskWithRequest(request, success: success, failure: failure)
+    }
+    
+    /**
      A simple HTTP DELETE method to delete a resource from the server.
      
      - Parameters:
      - urlString: The string representing the url.
+     - headers: Header key and value pairs
      - params: The body you need to pass with the DELETE method. Resources you want to delete.
      - success: Successful closure in case the request was successful.
      - failure: Failure Closure which notifies if any error has occured during the request.
