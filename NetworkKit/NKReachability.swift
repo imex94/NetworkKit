@@ -50,13 +50,11 @@ class NKReachability: NSObject {
             }
             
         }) else {
-            
             return false
         }
         
         var flags = SCNetworkReachabilityFlags()
         if !SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) {
-            
             return false
         }
         
