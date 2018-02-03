@@ -31,26 +31,20 @@ class NKEViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        NKHTTPRequest.GET(
+        _ = NKHTTPRequest.GET(
             "https://hacker-news.firebaseio.com/v0/item/11245652.json",
             params: ["print": "pretty"],
             success: { data in
                 
                 var item: NKEItem?
-                item <-- data
+                let _ = item <-- data
                 
-                print(item)
+                print(item ?? "No item")
             },
             failure: { error in
                 print(error.message)
         })
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

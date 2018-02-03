@@ -42,7 +42,7 @@ struct NKHNTestItem: Deserializable {
     var title = ""
     var type = ""
     var parent = 0
-    var date = NSDate()
+    var date = Date()
     
     /**
      Constructor of the Item class
@@ -50,13 +50,13 @@ struct NKHNTestItem: Deserializable {
      - Parameters:
      - data: The JSONDictionary parsed by the JSONHelper. @see JSONHelper
      */
-    init(data: [String : AnyObject]) {
-        id <-- data["id"]
-        username <-- data["by"]
-        kids <-- data["kids"]
-        title <-- data["title"]
-        type <-- data["type"]
-        parent <-- data["parent"]
-        date <-- data["time"]
+    init(data: [String : Any]) {
+        let _ = id <-- data["id"]
+        let _ = username <-- data["by"]
+        let _ = kids <-- data["kids"]
+        let _ = title <-- data["title"]
+        let _ = type <-- data["type"]
+        let _ = parent <-- data["parent"]
+        let _ = date <-- data["time"]
     }
 }

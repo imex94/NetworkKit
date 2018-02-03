@@ -33,7 +33,7 @@ struct NKEItem: Deserializable {
     var kids = [Int]()
     var title = ""
     var type = ""
-    var date = NSDate()
+    var date = Date()
     
     /**
      Constructor of the Item class
@@ -41,12 +41,12 @@ struct NKEItem: Deserializable {
      - Parameters:
      - data: The JSONDictionary parsed by the JSONHelper. @see JSONHelper
      */
-    init(data: [String : AnyObject]) {
-        id <-- data["id"]
-        username <-- data["by"]
-        kids <-- data["kids"]
-        title <-- data["title"]
-        type <-- data["type"]
-        date <-- data["time"]
+    init(data: [String : Any]) {
+        let _ = id <-- data["id"]
+        let _ = username <-- data["by"]
+        let _ = kids <-- data["kids"]
+        let _ = title <-- data["title"]
+        let _ = type <-- data["type"]
+        let _ = date <-- data["time"]
     }
 }

@@ -28,5 +28,3 @@
 
 FOUNDATION_EXPORT double NetworkKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char NetworkKitVersionString[];
-
-

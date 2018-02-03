@@ -57,23 +57,25 @@ class NKJSONHelperTests: XCTestCase {
     }
     
     func testJSONParsingIntoSwitObjectUsingSimpleJSON() {
-        let filePath = NSBundle(forClass: NKJSONHelperTests.self).pathForResource("hcNews", ofType: "json")
-        let data = NSData(contentsOfFile: filePath!)
-        let json = try? NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+        let filePath = Bundle(for: NKJSONHelperTests.self).path(forResource: "hcNews", ofType: "json")
+        let data = try? Data(contentsOf: URL(fileURLWithPath: filePath!))
+        let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
         
         var actual: NKHNTestItem?
-        actual <-- json
+        let _ = actual <-- json
         
         XCTAssertEqual(actual!, expectationItem)
     }
     
     func testJSONParsingIntoSwiftObjectUsingBigJSON() {
-        let filePath = NSBundle(forClass: NKJSONHelperTests.self).pathForResource("twitter", ofType: "json")
-        let data = NSData(contentsOfFile: filePath!)
-        let json = try? NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+        let filePath = Bundle(for: NKJSONHelperTests.self).path(forResource: "twitter", ofType: "json")
+        let data = try? Data(contentsOf: URL(fileURLWithPath: filePath!))
         
         var actual: NKTweet?
-        actual <-- json!["statuses"]!![0]
+        if let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: AnyObject] {
+            
+            let _ = actual <-- json!["statuses"]![0]
+        }
         
         let expectedUser = NKTwitterUser(data: [
             "name": "Sean Cummings",

@@ -35,24 +35,24 @@ func ==(lhs: NKTweet, rhs: NKTweet) -> Bool {
 extension NKTwitterUser: Equatable { }
 
 func ==(lhs: NKTwitterUser, rhs: NKTwitterUser) -> Bool {
-    return lhs.name == rhs.name && lhs.location == rhs.location && lhs.profileImage.absoluteString == rhs.profileImage.absoluteString && lhs.followers == rhs.followers && lhs.verified == rhs.verified && lhs.screenName == rhs.screenName
+    return lhs.name == rhs.name && lhs.location == rhs.location && lhs.profileImage?.absoluteString == rhs.profileImage?.absoluteString && lhs.followers == rhs.followers && lhs.verified == rhs.verified && lhs.screenName == rhs.screenName
 }
 
 struct NKTwitterUser: Deserializable {
     var name = ""
     var location = ""
-    var profileImage = NSURL()
+    var profileImage = URL(string: "")
     var followers = 0
     var verified = false
     var screenName = ""
     
-    init(data: [String : AnyObject]) {
-        name <-- data["name"]
-        location <-- data["location"]
-        profileImage <-- data["profile_image_url_https"]
-        followers <-- data["followers_count"]
-        verified <-- data["verified"]
-        screenName <-- data["screen_name"]
+    init(data: [String : Any]) {
+        let _ = name <-- data["name"]
+        let _ = location <-- data["location"]
+        let _ = profileImage <-- data["profile_image_url_https"]
+        let _ = followers <-- data["followers_count"]
+        let _ = verified <-- data["verified"]
+        let _ = screenName <-- data["screen_name"]
     }
 }
 
@@ -61,9 +61,9 @@ struct NKTweet: Deserializable {
     var retweetCount = 0
     var user: NKTwitterUser?
     
-    init(data: [String : AnyObject]) {
-        text <-- data["text"]
-        retweetCount <-- data["retweet_count"]
-        user <-- data["user"]
+    init(data: [String : Any]) {
+        let _ = text <-- data["text"]
+        let _ = retweetCount <-- data["retweet_count"]
+        let _ = user <-- data["user"]
     }
 }
